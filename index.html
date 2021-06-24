@@ -27,7 +27,7 @@
         </div>
         <div class="header_middle">
             <div class="header_main container justify-content-between">
-                <div class="menu_bar hidden-lg">
+                <div class="menu_bar--mobile hidden-lg">
                     <i class="fa fa-bars"></i>
                 </div>
                 <div class="logo col-auto">
@@ -62,8 +62,8 @@
             </div>
         </div>
         <div class="main-nav">
-            <div class="container  ">
-                <div class="nav hidden-mb hidden-tb ">
+            <div class="container ">
+                <div class="nav">
                     <div class="nav-item">
                         <a href="#" class="nav_link">trang chủ</a>
                     </div>
@@ -71,11 +71,25 @@
                         <a href="#" class="nav_link">giới thiệu</a>
                     </div>
                     <div class="nav-item">
-                        <a href="#" class="nav_link slide">chuyên khoa</a>
-                        <div class="nav_link-content"></div>
+                        <a href="#" class="nav_link slide">chuyên khoa  <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <ul class="nav_link--slide container">
+                            <li><a href="#">Khoa nội</a></li>
+                            <li><a href="#">Khoa ngoại</a></li>
+                            <li><a href="#">Khoa mắt</a></li>
+                            <li><a href="#">Khoa da liễu</a></li>
+                            <li><a href="#">Khoa nhi</a></li>
+                            <li><a href="#">Khoa tai mũi họng</a></li>
+                            <li><a href="#">Khoa răng hàm mặt</a></li>
+                            <li><a href="#">Khoa sản</a></li>
+                        </ul>
                     </div>
                     <div class="nav-item">
-                        <a href="#" class="nav_link slide">sản phẩm</a>
+                        <a href="#" class="nav_link slide">sản phẩm <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <ul class="nav_link--slide">
+                            <li><a href="#">Sản phẩm mới</a></li>
+                            <li><a href="#">Sản phẩm nổi bật</a></li>
+                            <li><a href="#">Sản phẩm khuyến mại</a></li>
+                        </ul>
                     </div>
                     <div class="nav-item">
                         <a href="#" class="nav_link">tin tức</a>
@@ -84,9 +98,31 @@
                         <a href="#" class="nav_link">liên hệ</a>
                     </div>
                 </div>
-                <div class="nav hidden-lg ">
+                <div class="nav hidden-lg container">
+                    <a href="#" class="nav_link">trang chủ</a>
+                    <a href="#" class="nav_link">giới thiệu</a>
+                    <a href="#" class="nav_link slide">chuyên khoa <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="nav_link--slide">
+                        <li><a href="#">Khoa nội</a></li>
+                        <li><a href="#">Khoa ngoại</a></li>
+                        <li><a href="#">Khoa mắt</a></li>
+                        <li><a href="#">Khoa da liễu</a></li>
+                        <li><a href="#">Khoa nhi</a></li>
+                        <li><a href="#">Khoa tai mũi họng</a></li>
+                        <li><a href="#">Khoa răng hàm mặt</a></li>
+                        <li><a href="#">Khoa sản</a></li>
+                    </ul>
+                    <a href="#" class="nav_link slide">sản phẩm <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="nav_link--slide">
+                        <li><a href="#">Sản phẩm mới</a></li>
+                        <li><a href="#">Sản phẩm nổi bật</a></li>
+                        <li><a href="#">Sản phẩm khuyến mại</a></li>
+                    </ul>
+                    <a href="#" class="nav_link">tin tức</a>
+                    <a href="#" class="nav_link">liên hệ</a>
                 </div>
             </div>
+        </div>
         </div>
         <div class="fixed-right">
             <a href="" target="_blank">
@@ -171,29 +207,29 @@
         </div>
         <div class="container carousel slide" data-ride="carousel">
             <div class=" row">
-                <div class=" card col-lg-3 col-md-5 col-sm-7">
-                    <img class="col-lg-4 col-md-5 col-sm-7 " src="./assets/medias/section_why_item_image1.png" alt="" class="card-img-top">
+                <div class=" card col-lg-3 col-md-4 col-sm-6">
+                    <img class=" " src="./assets/medias/section_why_item_image1.png" alt="" class="card-img-top">
                     <div class="card-body">
                         <h3 class="card-title">đội ngũ bác sỹ tư vấn 24/7</h3>
                         <p class="card-text">Tại phòng khám có đội ngũ bác sĩ tư vấn 14/24 tất cả các ngày. Dù bạn ở bất cứ nơi đâu, chỉ cần nhấc máy lên và kết nối liên lạc, đội ngũ bác sĩ giàu kinh nghiệm sẽ giải đáp thắc mắc cho bạn.</p>
                     </div>
                 </div>
-                <div class=" card col-lg-3 col-md-5 col-sm-7">
-                    <img class="col-lg-4 col-md-5 col-sm-7 " src="./assets/medias/section_why_item_image2.png" alt="" class="card-img-top">
+                <div class=" card col-lg-3 col-md-4 col-sm-6">
+                    <img class=" " src="./assets/medias/section_why_item_image2.png" alt="" class="card-img-top">
                     <div class="card-body">
                         <h3 class="card-title">tiết kiệm được chi phí và thời gian của bạn</h3>
                         <p class="card-text">Bằng việc nhấp chuột vào nút bác sĩ tư vấn và đăng ký trực tuyến, bạn không phải chờ bốc số mà còn được hưởng nhiều ưu đãi về chi phí.</p>
                     </div>
                 </div>
-                <div class="card  col-lg-3 col-md-5 col-sm-7">
-                    <img class="col-lg-4 col-md-5 col-sm-7 " src="./assets/medias/section_why_item_image3.png" alt="" class="card-img-top">
+                <div class="card  col-lg-3 col-md-4 col-sm-6">
+                    <img class=" " src="./assets/medias/section_why_item_image3.png" alt="" class="card-img-top">
                     <div class="card-body">
                         <h3 class="card-title">bảo mật tuyệt đối thông tin người dùng</h3>
                         <p class="card-text">Đến với phòng khám đa khoa Thái Hà, mọi thông tin cá nhân và hồ sơ bệnh án của bệnh nhân đều được bảo mật tuyệt đối</p>
                     </div>
                 </div>
-                <div class=" card col-lg-3 col-md-5 col-sm-7">
-                    <img class="col-lg-4 col-md-5 col-sm-7 " src="./assets/medias/section_why_item_image4.png" alt="" class="card-img-top">
+                <div class=" card col-lg-3 col-md-4 col-sm-6">
+                    <img class=" " src="./assets/medias/section_why_item_image4.png" alt="" class="card-img-top">
                     <div class="card-body">
                         <h3 class="card-title">được tư vấn chăm sóc sức khoẻ sau khi điều trị</h3>
                         <p class="card-text">Sau quá trình chữa bệnh tại phòng khám, bác sĩ điều trị sẽ tư vấn cho bạn cách chăm sóc sức khỏe tốt nhất, phòng tránh bệnh tái phát.</p>
@@ -211,22 +247,22 @@
         </div>
     </section>
     <section class=" register">
-        <div class="flex-wrap container">
-            <div class="  col-lg-4 ">
+        <div class=" container">
+            <div class="  col-lg-4 col-md-4 col-sm-12 ">
                 <img class="image" src="./assets/medias/home-register1.png" alt="">
                 <div class="text">
                     <h3>448</h3>
                     <p>người đang online</p>
                 </div>
             </div>
-            <div class="  col-lg-4 ">
+            <div class="  col-lg-4 col-md-4 col-sm-12 ">
                 <img class="image" src="./assets/medias/home-register2.png" alt="">
                 <div class="text">
                     <h3>120</h3>
                     <p>người đang điều trị</p>
                 </div>
             </div>
-            <div class="  col-lg-4 ">
+            <div class="  col-lg-4 col-md-4 col-sm-12 ">
                 <img class="image" src="./assets/medias/home-register3.png" alt="">
                 <div class="text">
                     <h3>50</h3>
@@ -354,7 +390,7 @@
         </div>
         <div class=" carousel slide" data-ride="carousel">
             <div class=" row container">
-                <div class="card col-2-4 ">
+                <div class="card col-2-4 col-md-4 col-sm-6 ">
                     <div class="card-head">
                         <a href="#" class="card-thumbnail">
                             <img class="card-img" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
@@ -375,7 +411,7 @@
                         <div class="price">12.000.000<u>đ</u></div>
                     </div>
                 </div>
-                <div class="card col-2-4 reduce">
+                <div class="card col-2-4 col-md-4 col-sm-6 reduce">
                     <div class="card-head">
                         <a href="#" class="card-thumbnail">
                             <img class="card-img" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
@@ -396,7 +432,7 @@
                         <div class="price">12.000.000<u>đ</u></div>
                     </div>
                 </div>
-                <div class="card col-2-4 ">
+                <div class="card col-2-4 col-md-4 col-sm-6 ">
                     <div class="card-head">
                         <a href="#" class="card-thumbnail">
                             <img class="card-img" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
@@ -417,7 +453,7 @@
                         <div class="price">12.000.000<u>đ</u></div>
                     </div>
                 </div>
-                <div class="card col-2-4 reduce">
+                <div class="card col-2-4 col-md-4 col-sm-6 reduce">
                     <div class="card-head">
                         <a href="#" class="card-thumbnail">
                             <img class="card-img" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
@@ -438,7 +474,7 @@
                         <div class="price">12.000.000<u>đ</u></div>
                     </div>
                 </div>
-                <div class="card col-2-4 ">
+                <div class="card col-2-4 col-md-4 col-sm-6 ">
                     <div class="card-head">
                         <a href="#" class="card-thumbnail">
                             <img class="card-img" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
@@ -476,7 +512,7 @@
             <h2>tin tức - sức khoẻ</h2>
         </div>
         <div class="container carousel slide" data-ride="carousel">
-            <div class=" row">
+            <div class="row">
                 <div class=" card col-lg-3 col-md-4 col-sm-6">
                     <div class="card-head">
                         <a href="" class="card-thumbnail ">
@@ -560,7 +596,7 @@
         <div class="back-to-top"></div>
         <div class="footer-slide">
             <div class="row container">
-                <div class="footer-widget col-lg-3 col-md-6 col-sm-5">
+                <div class="footer-widget col-lg-3 col-md-6 col-sm-12">
                     <a href="" class="logo-wrap">
                         <img src="./assets/medias/logo.png" alt="">
                     </a>
@@ -574,7 +610,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer-widget col-lg-3 col-md-4 col-sm-5 col-mg-lf ">
+                <div class="footer-widget col-lg-3 col-md-6 col-sm-12  col-mg-lf">
                     <h4>kết nối với chúng tôi</h4>
                     <p>Với sứ mệnh giữ gìn và tôn vinh vẻ đẹp Việt, trong suốt 14 năm qua.Chúng tôi mong muốn tạo nên Tập đoàn Thẩm mỹ uy tín nhất tại Việt Nam.</p>
                     <ul class="list-row">
@@ -592,7 +628,7 @@
                         </a>
                     </ul>
                 </div>
-                <div class="footer-widget col-lg-3 col-md-4 col-sm-5 col-mg-lf   item-hover-move-right">
+                <div class="footer-widget col-lg-2 col-md-6 col-sm-12 col-mg-lf   item-hover-move-right">
                     <h4>Giới thiệu</h4>
                     <ul class="list-col">
                         <li><a href="">Trang chủ</a></li>
@@ -603,7 +639,7 @@
                         <li><a href="">Liên hệ</a></li>
                     </ul>
                 </div>
-                <div class="footer-widget col-lg-3 col-md-4 col-sm-5 ">
+                <div class="footer-widget col-lg-2 col-md-6 col-sm-12 ">
                     <h4>Chính sách</h4>
                     <ul class="list-col">
                         <li><a href="">Trang chủ</a></li>
