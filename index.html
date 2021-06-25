@@ -6,9 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="http://bizweb.dktcdn.net/100/358/886/themes/725379/assets/favicon.png?1618758728692" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/outSouces/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/outSouces/css/aos.css">
+    <link rel="stylesheet" href="./assets/outSouces/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/outSouces/css/font-awesome.css">
+    <link rel="stylesheet" href="./assets/outSouces/css/owl.carousel.css">
+    <link rel="stylesheet" href="./assets/outSouces/css/slick-theme.css">
+    <link rel="stylesheet" href="./assets/outSouces/css/slick.css">
     <link rel="stylesheet" href="./assets/csss/style.css">
-    <script src="./assets/outSouces/scripts/jquery-3.4.1.js"></script>
+    <script src="./assets/outSouces/scripts/aos.js"></script>
+    <script src="./assets/outSouces/scripts/jquery.min.js"></script>
+    <script src="./assets/outSouces/scripts/bootstrap.min.js"></script>
+    <script src="./assets/outSouces/scripts/owl.carousel.js"></script>
+    <script src="./assets/outSouces/scripts/owl.carousel.min.js"></script>
+    <script src="./assets/outSouces/scripts/slick.min.js"></script>
+    <script src="./assets/scripts/main.js"></script>
     <script src="https://kit.fontawesome.com/4df1339666.js" crossorigin="anonymous"></script>
     <title>Halumeditec</title>
 </head>
@@ -39,7 +50,7 @@
                     <img src="./assets/medias/header_banner_top.png" alt="">
                 </div>
                 <div class="box-right">
-                    <div class="box_search col-auto realative ">
+                    <div class="box_search  realative ">
                         <div class="hover-next">
                             <i class="fa fa-search"></i>
                             <div class="header_search hidden hover-next-target">
@@ -50,10 +61,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box_cart col-auto realative vertical-tiles-bf">
+                    <div class="box_cart  realative vertical-tiles-bf">
                         <div class="hover-next">
-                            <a href="#">
+                            <a class="header-cart-icon" href="#">
                                 <i class="fa fa-shopping-cart"></i>
+                                <span class="header-cart-count">0</span>
                             </a>
                             <div class="header-cart hidden hover-next-target">
                                 <p>
@@ -62,7 +74,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box_user col-auto realative vertical-tiles-bf">
+                    <div class="box_user  realative vertical-tiles-bf">
                         <div class="hover-next">
                             <i class="fa fa-user"></i>
                             <div class="header-user hidden hover-next-target">
@@ -123,26 +135,26 @@
                         <a href="#" class="nav_link">liên hệ</a>
                     </div>
                 </div>
-                <div class="nav hidden-lg container">
+                <div class="nav-scale container">
                     <a href="#" class="nav_link">trang chủ</a>
                     <a href="#" class="nav_link">giới thiệu</a>
-                    <a href="#" class="nav_link slide">chuyên khoa <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                    <ul class="nav_link--slide">
-                        <li><a href="#">Khoa nội</a></li>
-                        <li><a href="#">Khoa ngoại</a></li>
-                        <li><a href="#">Khoa mắt</a></li>
-                        <li><a href="#">Khoa da liễu</a></li>
-                        <li><a href="#">Khoa nhi</a></li>
-                        <li><a href="#">Khoa tai mũi họng</a></li>
-                        <li><a href="#">Khoa răng hàm mặt</a></li>
-                        <li><a href="#">Khoa sản</a></li>
-                    </ul>
-                    <a href="#" class="nav_link slide">sản phẩm <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                    <ul class="nav_link--slide">
-                        <li><a href="#">Sản phẩm mới</a></li>
-                        <li><a href="#">Sản phẩm nổi bật</a></li>
-                        <li><a href="#">Sản phẩm khuyến mại</a></li>
-                    </ul>
+                    <a href="#" class="nav_link slide">chuyên khoa <i class="fa fa-angle-down khoa" aria-hidden="true"></i></a>
+                    <div class="nav_link--slide khoa">
+                        <a href="#">Khoa nội</a>
+                        <a href="#">Khoa ngoại</a>
+                        <a href="#">Khoa mắt</a>
+                        <a href="#">Khoa da liễu</a>
+                        <a href="#">Khoa nhi</a>
+                        <a href="#">Khoa tai mũi họng</a>
+                        <a href="#">Khoa răng hàm mặt</a>
+                        <a href="#">Khoa sản</a>
+                    </div>
+                    <a href="#" class="nav_link slide">sản phẩm <i class="fa fa-angle-down san-pham" aria-hidden="true"></i></a>
+                    <div class="nav_link--slide san-pham">
+                        <a href="#">Sản phẩm mới</a>
+                        <a href="#">Sản phẩm nổi bật</a>
+                        <a href="#">Sản phẩm khuyến mại</a>
+                    </div>
                     <a href="#" class="nav_link">tin tức</a>
                     <a href="#" class="nav_link">liên hệ</a>
                 </div>
@@ -161,56 +173,50 @@
             </a>
         </div>
     </header>
-
     <section class=" banner row">
-        <div class="carousel-multi carousel slide" id="banner-slide" data-ride="carousel" style="width: 100%;">
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" style="width: 100%" src="./assets/medias/slider_1.jpg" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" style="width: 100%" src="./assets/medias/slider_2.jpg" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" style="width: 100%" src="./assets/medias/slider_2.jpg" alt="Third slide">
-                </div>
+        <div class="owl-carousel slider_main">
+            <div class=" item">
+                <img class="d-block w-100" style="width: 100%" src="./assets/medias/slider_1.jpg" alt="First slide">
             </div>
-            <a class="carousel-control carousel-control-prev left" href="#banner-slide" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control carousel-control-next right" href="#banner-slide" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class=" item">
+                <img class="d-block w-100" style="width: 100%" src="./assets/medias/slider_2.jpg" alt="Second slide">
+            </div>
+            <div class=" item">
+                <img class="d-block w-100" style="width: 100%" src="./assets/medias/slider_2.jpg" alt="Third slide">
+            </div>
+        </div>
         </div>
     </section>
     <section class=" faculty container">
-        <div id="faculty-slide " class="carousel-multi carousel slide" data-ride="carousel">
-            <div class=" row">
-                <img class="  col-lg-2 col-md-3 col-sm-4" src="./assets/medias/image-chuyenkhoa1.png" alt="First slide">
-                <img class="  col-lg-2 col-md-3 col-sm-4" src="./assets/medias/image-chuyenkhoa2.png" alt="First slide">
-                <img class="  col-lg-2 col-md-3 col-sm-4" src="./assets/medias/image-chuyenkhoa3.png" alt="First slide">
-                <img class="  col-lg-2 col-md-3 col-sm-4" src="./assets/medias/image-chuyenkhoa4.png" alt="First slide">
-                <img class="  col-lg-2 col-md-3 col-sm-4" src="./assets/medias/image-chuyenkhoa5.png" alt="First slide">
-                <img class="  col-lg-2  col-md-3 col-sm-4" src="./assets/medias/image-chuyenkhoa6.png" alt="First slide">
+        <div class="owl-carousel slider_faculty" data-ride="carousel">
+            <div class="item">
+                <img class="" src="./assets/medias/image-chuyenkhoa1.png" alt="First slide">
             </div>
-            <a class="carousel-control-prev carousel-control" href="#faculty-slide" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next carousel-control" href="#faculty-slide" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="item">
+                <img class="" src="./assets/medias/image-chuyenkhoa2.png" alt="First slide">
+            </div>
+            <div class="item">
+                <img class="" src="./assets/medias/image-chuyenkhoa3.png" alt="First slide">
+            </div>
+            <div class="item">
+                <img class="" src="./assets/medias/image-chuyenkhoa4.png" alt="First slide">
+            </div>
+            <div class="item">
+                <img class="" src="./assets/medias/image-chuyenkhoa5.png" alt="First slide">
+            </div>
+            <div class="item">
+                <img class="" src="./assets/medias/image-chuyenkhoa6.png" alt="First slide">
+            </div>
+            <div class="item">
+                <img class="" src="./assets/medias/image-chuyenkhoa4.png" alt="First slide">
+            </div>
         </div>
     </section>
     <section class="container about">
         <div class="title-text">
             <h2>giới thiệu về chúng tôi</h2>
         </div>
-
-        <div class="row">
+        <div class=" row">
             <div class="col-lg-7">
                 <div class="content-text">
                     <div class="title">
@@ -230,45 +236,35 @@
         <div class="container title-text">
             <h2>tại sao lại chọn phòng khám meditec</h2>
         </div>
-        <div class="container carousel slide" data-ride="carousel">
-            <div class=" row">
-                <div class=" card col-lg-3 col-md-4 col-sm-6">
-                    <img class=" " src="./assets/medias/section_why_item_image1.png" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">đội ngũ bác sỹ tư vấn 24/7</h3>
-                        <p class="card-text">Tại phòng khám có đội ngũ bác sĩ tư vấn 14/24 tất cả các ngày. Dù bạn ở bất cứ nơi đâu, chỉ cần nhấc máy lên và kết nối liên lạc, đội ngũ bác sĩ giàu kinh nghiệm sẽ giải đáp thắc mắc cho bạn.</p>
-                    </div>
-                </div>
-                <div class=" card col-lg-3 col-md-4 col-sm-6">
-                    <img class=" " src="./assets/medias/section_why_item_image2.png" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">tiết kiệm được chi phí và thời gian của bạn</h3>
-                        <p class="card-text">Bằng việc nhấp chuột vào nút bác sĩ tư vấn và đăng ký trực tuyến, bạn không phải chờ bốc số mà còn được hưởng nhiều ưu đãi về chi phí.</p>
-                    </div>
-                </div>
-                <div class="card  col-lg-3 col-md-4 col-sm-6">
-                    <img class=" " src="./assets/medias/section_why_item_image3.png" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">bảo mật tuyệt đối thông tin người dùng</h3>
-                        <p class="card-text">Đến với phòng khám đa khoa Thái Hà, mọi thông tin cá nhân và hồ sơ bệnh án của bệnh nhân đều được bảo mật tuyệt đối</p>
-                    </div>
-                </div>
-                <div class=" card col-lg-3 col-md-4 col-sm-6">
-                    <img class=" " src="./assets/medias/section_why_item_image4.png" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">được tư vấn chăm sóc sức khoẻ sau khi điều trị</h3>
-                        <p class="card-text">Sau quá trình chữa bệnh tại phòng khám, bác sĩ điều trị sẽ tư vấn cho bạn cách chăm sóc sức khỏe tốt nhất, phòng tránh bệnh tái phát.</p>
-                    </div>
+        <div class="container service_slide owl-carousel ">
+            <div class="item">
+                <img class=" " src="./assets/medias/section_why_item_image1.png" alt="" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title">đội ngũ bác sỹ tư vấn 24/7</h3>
+                    <p class="card-text">Tại phòng khám có đội ngũ bác sĩ tư vấn 14/24 tất cả các ngày. Dù bạn ở bất cứ nơi đâu, chỉ cần nhấc máy lên và kết nối liên lạc, đội ngũ bác sĩ giàu kinh nghiệm sẽ giải đáp thắc mắc cho bạn.</p>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="item">
+                <img class=" " src="./assets/medias/section_why_item_image2.png" alt="" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title">tiết kiệm được chi phí và thời gian của bạn</h3>
+                    <p class="card-text">Bằng việc nhấp chuột vào nút bác sĩ tư vấn và đăng ký trực tuyến, bạn không phải chờ bốc số mà còn được hưởng nhiều ưu đãi về chi phí.</p>
+                </div>
+            </div>
+            <div class="item">
+                <img class=" " src="./assets/medias/section_why_item_image3.png" alt="" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title">bảo mật tuyệt đối thông tin người dùng</h3>
+                    <p class="card-text">Đến với phòng khám đa khoa Thái Hà, mọi thông tin cá nhân và hồ sơ bệnh án của bệnh nhân đều được bảo mật tuyệt đối</p>
+                </div>
+            </div>
+            <div class="item">
+                <img class=" " src="./assets/medias/section_why_item_image4.png" alt="" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title">được tư vấn chăm sóc sức khoẻ sau khi điều trị</h3>
+                    <p class="card-text">Sau quá trình chữa bệnh tại phòng khám, bác sĩ điều trị sẽ tư vấn cho bạn cách chăm sóc sức khỏe tốt nhất, phòng tránh bệnh tái phát.</p>
+                </div>
+            </div>
         </div>
     </section>
     <section class=" register">
@@ -303,17 +299,16 @@
         <div class="container title-text">
             <h2>ý kiến của bệnh nhân</h2>
         </div>
-        <div class="container carousel slide" data-ride="carousel">
-            <div class=" row">
-                <div class=" card col-lg-4 col-md-6 col-sm-12">
+        <div class="container">
+            <div class=" row comment_slide owl-carousel">
+                <div class=" card item">
                     <div class="card-head">
                         <img src="./assets/medias/avatar-testimonial1.jpg" alt="" class="card-img-top">
                         <div class="card-head--title">
-
                             <h3>Chị Bích Trâm</h3>
                             <div class="position">"Kế toán"</div>
                             <div class="star">
-                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                <i class="fa fa-star" style="color: #d1a537;"></i> <i class="fa fa-star" style="color: #d1a537;"></i> <i class="fa fa-star" style="color: #d1a537;"></i> <i class="fa fa-star" style="color: #d1a537;"></i>
                             </div>
                         </div>
                     </div>
@@ -321,7 +316,7 @@
                         <p class="card-text">Tại phòng khám có đội ngũ bác sĩ tư vấn 14/24 tất cả các ngày. Dù bạn ở bất cứ nơi đâu, chỉ cần nhấc máy lên và kết nối liên lạc, đội ngũ bác sĩ giàu kinh nghiệm sẽ giải đáp thắc mắc cho bạn.</p>
                     </div>
                 </div>
-                <div class=" card col-lg-4 col-md-6 col-sm-12">
+                <div class=" card item">
                     <div class="card-head">
                         <img src="./assets/medias/avatar-testimonial2.jpg" alt="" class="card-img-top">
                         <div class="card-head--title">
@@ -329,7 +324,7 @@
                             <h3>Chị Bích Trâm</h3>
                             <div class="position">"Kế toán"</div>
                             <div class="star">
-                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                <i class="fa fa-star" style="color: #d1a537;"></i> <i class="fa fa-star" style="color: #d1a537;"></i> <i class="fa fa-star" style="color: #d1a537;"></i> <i class="fa fa-star" style="color: #d1a537;"></i>
                             </div>
                         </div>
                     </div>
@@ -337,7 +332,7 @@
                         <p class="card-text">Bằng việc nhấp chuột vào nút bác sĩ tư vấn và đăng ký trực tuyến, bạn không phải chờ bốc số mà còn được hưởng nhiều ưu đãi về chi phí.</p>
                     </div>
                 </div>
-                <div class="card  col-lg-4 col-md-6 col-sm-12">
+                <div class="card  item">
                     <div class="card-head">
                         <img src="./assets/medias/avatar-testimonial3.jpg" alt="" class="card-img-top">
                         <div class="card-head--title">
@@ -345,7 +340,7 @@
                             <h3>Chị Bích Trâm</h3>
                             <div class="position">"Kế toán"</div>
                             <div class="star">
-                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                <i class="fa fa-star" style="color: #d1a537;"></i> <i class="fa fa-star" style="color: #d1a537;"></i> <i class="fa fa-star" style="color: #d1a537;"></i> <i class="fa fa-star" style="color: #d1a537;"></i>
                             </div>
                         </div>
                     </div>
@@ -354,44 +349,36 @@
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
     </section>
     <section class="container step">
         <div class="title-text">
             <h2>quy trình khám - chữa bệnh</h2>
         </div>
-        <div class="container carousel slide" data-ride="carousel">
-            <div class=" row">
-                <div class=" card col-lg-3 col-md-4 col-sm-6">
+        <div class="container ">
+            <div class=" row step_slide owl-carousel">
+                <div class=" card item">
                     <img class="col-lg-7 col-md-7 col-sm-7 " src="./assets/medias/section_quytrinh_item_image1.png" alt="" class="card-img-top">
                     <div class="card-body">
                         <h3 class="card-title">quy trình 1:</h3>
                         <p class="card-text">Tư vấn và lấy mã số khám bệnh</p>
                     </div>
                 </div>
-                <div class=" card col-lg-3 col-md-4 col-sm-6">
+                <div class=" card item">
                     <img class="col-lg-7 col-md-7 col-sm-7 " src="./assets/medias/section_quytrinh_item_image2.png" alt="" class="card-img-top">
                     <div class="card-body">
                         <h3 class="card-title">quy trình 2:</h3>
                         <p class="card-text">Làm thủ tục thăm khám</p>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-md-4 col-sm-6">
+                <div class="card item">
                     <img class="col-lg-7 col-md-7 col-sm-7 " src="./assets/medias/section_quytrinh_item_image3.png" alt="" class="card-img-top">
                     <div class="card-body">
                         <h3 class="card-title">quy trình 3:</h3>
                         <p class="card-text">Bác sỹ đưa ra phương pháp điều trị</p>
                     </div>
                 </div>
-                <div class=" card col-lg-3 col-md-4 col-sm-6">
+                <div class=" card item">
                     <img class="col-lg-7 col-md-7 col-sm-7 " src="./assets/medias/section_quytrinh_item_image4.png" alt="" class="card-img-top">
                     <div class="card-body">
                         <h3 class="card-title">quy trình 4:</h3>
@@ -399,135 +386,130 @@
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
     </section>
     <section class=" product container">
         <div class="title-text">
             <h2>thiết bị y tế</h2>
         </div>
-        <div class=" carousel slide" data-ride="carousel">
-            <div class=" row container">
-                <div class="card col-2-4 col-md-4 col-sm-6 ">
-                    <div class="card-head">
-                        <a href="#" class="card-thumbnail">
-                            <img class="card-img" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
-                        </a>
-                        <a href="" class="quick-view" index="1">
-                            <i class="fa fa-eye"></i>
-                        </a>
-                        <a href="" class="add-cart" index="1">
-                            <i class="fa fa-cart-plus"></i>
-                        </a>
-                        <div class="sale-flash">-38%</div>
-                        <div class="card-img--overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <a href="" class="card-title">
-                            <h3>Máy đo đường huyết Medismart Sapphire Plus</h3>
-                        </a>
-                        <div class="price">12.000.000<u>đ</u></div>
+        <div class=" row owl-carousel product_slide">
+            <div class="card item ">
+                <div class="card-head">
+                    <a href="#" class="card-thumbnail">
+                        <img class="card-img" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
+                    </a>
+                    <a href="" class="quick-view" index="1">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                    <a href="" class="add-cart" index="1">
+                        <i class="fa fa-cart-plus"></i>
+                    </a>
+                    <div class="sale-flash">-38%</div>
+                    <div class="card-img--overlay"></div>
+                </div>
+                <div class="card-body">
+                    <a href="" class="card-title">
+                        <h3>Nhiệt kế điện tử hồng ngoại Bosotherm Medical</h3>
+                    </a>
+                    <div class="cost ">1.250.000<u>đ</u></div>
+                    <div class="old-price">2.000.000<u>đ</u></div>
+                </div>
+            </div>
+            <div class="card item reduce">
+                <div class="card-head">
+                    <a href="#" class="card-thumbnail">
+                        <img class="card-img" src="./assets/medias/31538110605-nv.png" alt="" class="card-img-top">
+                    </a>
+                    <a href="" class="quick-view" index="1">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                    <a href="" class="add-cart" index="1">
+                        <i class="fa fa-cart-plus"></i>
+                    </a>
+                    <div class="sale-flash">-38%</div>
+                    <div class="card-img--overlay"></div>
+                </div>
+                <div class="card-body">
+                    <a href="" class="card-title">
+                        <h3>Máy tạo oxy Sysmed M50</h3>
+                    </a>
+                    <div class="price">
+                        <div class="cost ">1.250.000<u>đ</u></div>
+                        <div class="old-price">2.000.000<u>đ</u></div>
                     </div>
                 </div>
-                <div class="card col-2-4 col-md-4 col-sm-6 reduce">
-                    <div class="card-head">
-                        <a href="#" class="card-thumbnail">
-                            <img class="card-img" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
-                        </a>
-                        <a href="" class="quick-view" index="1">
-                            <i class="fa fa-eye"></i>
-                        </a>
-                        <a href="" class="add-cart" index="1">
-                            <i class="fa fa-cart-plus"></i>
-                        </a>
-                        <div class="sale-flash">-38%</div>
-                        <div class="card-img--overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <a href="" class="card-title">
-                            <h3>Máy đo đường huyết Medismart Sapphire Plus</h3>
-                        </a>
-                        <div class="price">12.000.000<u>đ</u></div>
+            </div>
+            <div class="card item ">
+                <div class="card-head">
+                    <a href="#" class="card-thumbnail">
+                        <img class="card-img" src="./assets/medias/avatar-jumper-jpd-100s5-a1526464918-nv.jpg" alt="" class="card-img-top">
+                    </a>
+                    <a href="" class="quick-view" index="1">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                    <a href="" class="add-cart" index="1">
+                        <i class="fa fa-cart-plus"></i>
+                    </a>
+                    <div class="sale-flash">-38%</div>
+                    <div class="card-img--overlay"></div>
+                </div>
+                <div class="card-body">
+                    <a href="" class="card-title">
+                        <h3>Máy nghe tim thai JPD-100S5</h3>
+                    </a>
+                    <div class="price">
+                        <div class="cost ">1.250.000<u>đ</u></div>
+                        <div class="old-price">2.000.000<u>đ</u></div>
                     </div>
                 </div>
-                <div class="card col-2-4 col-md-4 col-sm-6 ">
-                    <div class="card-head">
-                        <a href="#" class="card-thumbnail">
-                            <img class="card-img" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
-                        </a>
-                        <a href="" class="quick-view" index="1">
-                            <i class="fa fa-eye"></i>
-                        </a>
-                        <a href="" class="add-cart" index="1">
-                            <i class="fa fa-cart-plus"></i>
-                        </a>
-                        <div class="sale-flash">-38%</div>
-                        <div class="card-img--overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <a href="" class="card-title">
-                            <h3>Máy đo đường huyết Medismart Sapphire Plus</h3>
-                        </a>
-                        <div class="price">12.000.000<u>đ</u></div>
+            </div>
+            <div class="card item reduce">
+                <div class="card-head">
+                    <a href="#" class="card-thumbnail">
+                        <img class="card-img" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
+                    </a>
+                    <a href="" class="quick-view" index="1">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                    <a href="" class="add-cart" index="1">
+                        <i class="fa fa-cart-plus"></i>
+                    </a>
+                    <div class="sale-flash">-38%</div>
+                    <div class="card-img--overlay"></div>
+                </div>
+                <div class="card-body">
+                    <a href="" class="card-title">
+                        <h3>Máy đo đường huyết Medismart Sapphire Plus</h3>
+                    </a>
+                    <div class="price">
+                        <div class="cost ">1.250.000<u>đ</u></div>
+                        <div class="old-price">2.000.000<u>đ</u></div>
                     </div>
                 </div>
-                <div class="card col-2-4 col-md-4 col-sm-6 reduce">
-                    <div class="card-head">
-                        <a href="#" class="card-thumbnail">
-                            <img class="card-img" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
-                        </a>
-                        <a href="" class="quick-view" index="1">
-                            <i class="fa fa-eye"></i>
-                        </a>
-                        <a href="" class="add-cart" index="1">
-                            <i class="fa fa-cart-plus"></i>
-                        </a>
-                        <div class="sale-flash">-38%</div>
-                        <div class="card-img--overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <a href="" class="card-title">
-                            <h3>Máy đo đường huyết Medismart Sapphire Plus</h3>
-                        </a>
-                        <div class="price">12.000.000<u>đ</u></div>
+            </div>
+            <div class="card item ">
+                <div class="card-head">
+                    <a href="#" class="card-thumbnail">
+                        <img class="card-img" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
+                    </a>
+                    <a href="" class="quick-view" index="1">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                    <a href="" class="add-cart" index="1">
+                        <i class="fa fa-cart-plus"></i>
+                    </a>
+                    <div class="sale-flash">-38%</div>
+                    <div class="card-img--overlay"></div>
+                </div>
+                <div class="card-body">
+                    <a href="" class="card-title">
+                        <h3>Máy đo đường huyết Medismart Sapphire Plus</h3>
+                    </a>
+                    <div class="price">
+                        <div class="cost ">1.250.000<u>đ</u></div>
+                        <div class="old-price">2.000.000<u>đ</u></div>
                     </div>
                 </div>
-                <div class="card col-2-4 col-md-4 col-sm-6 ">
-                    <div class="card-head">
-                        <a href="#" class="card-thumbnail">
-                            <img class="card-img" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
-                        </a>
-                        <a href="" class="quick-view" index="1">
-                            <i class="fa fa-eye"></i>
-                        </a>
-                        <a href="" class="add-cart" index="1">
-                            <i class="fa fa-cart-plus"></i>
-                        </a>
-                        <div class="sale-flash">-38%</div>
-                        <div class="card-img--overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <a href="" class="card-title">
-                            <h3>Máy đo đường huyết Medismart Sapphire Plus</h3>
-                        </a>
-                        <div class="price">12.000.000<u>đ</u></div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
             <div class="modal popup-cart"></div>
         </div>
@@ -536,9 +518,9 @@
         <div class="title-text">
             <h2>tin tức - sức khoẻ</h2>
         </div>
-        <div class="container carousel slide" data-ride="carousel">
-            <div class="row">
-                <div class=" card col-lg-3 col-md-4 col-sm-6">
+        <div class="container">
+            <div class="row news_slide owl-carousel">
+                <div class=" card item">
                     <div class="card-head">
                         <a href="" class="card-thumbnail ">
                             <img src="./assets/medias/nuoc-ep2.jpg" alt="" class="card-img-top">
@@ -555,7 +537,7 @@
                         <p class="card-text">Một ly nước ép mỗi ngày hơn cả trăm thang thuốc bổ Lâu nay loại nước ép này được biết đến vớ...</p>
                     </div>
                 </div>
-                <div class=" card col-lg-3 col-md-4 col-sm-6">
+                <div class=" card item">
                     <div class="card-head">
                         <a href="" class="card-thumbnail ">
                             <img src="./assets/medias/nuoc-ep2.jpg" alt="" class="card-img-top">
@@ -572,7 +554,7 @@
                         <p class="card-text">Một ly nước ép mỗi ngày hơn cả trăm thang thuốc bổ Lâu nay loại nước ép này được biết đến vớ...</p>
                     </div>
                 </div>
-                <div class=" card col-lg-3 col-md-4 col-sm-6">
+                <div class=" card item">
                     <div class="card-head">
                         <a href="" class="card-thumbnail ">
                             <img src="./assets/medias/nuoc-ep2.jpg" alt="" class="card-img-top">
@@ -589,7 +571,7 @@
                         <p class="card-text">Một ly nước ép mỗi ngày hơn cả trăm thang thuốc bổ Lâu nay loại nước ép này được biết đến vớ...</p>
                     </div>
                 </div>
-                <div class=" card col-lg-3 col-md-4 col-sm-6">
+                <div class=" card item">
                     <div class="card-head">
                         <a href="" class="card-thumbnail ">
                             <img src="./assets/medias/nuoc-ep2.jpg" alt="" class="card-img-top">
@@ -607,14 +589,6 @@
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
     </section>
     <footer class=footer>

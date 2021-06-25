@@ -1,85 +1,240 @@
+$(document).ready(function() {
+    $(".menu_bar--mobile").unbind().click(function(e) {
+        $(".nav-scale")[0].classList.toggle("active");
+    });
+    $("i.khoa").unbind().click(function(e) {
+        $(".nav_link--slide.khoa").toggle();
+    });
+    $("i.san-pham").unbind().click(function(e) {
+        $(".nav_link--slide.san-pham").toggle();
+    });
+
+    $(".banner .slider_main").owlCarousel({
+        items: 1,
+        rewind: false,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 1000,
+        dots: false,
+        dotsEach: false,
+        loop: true,
+        nav: true,
+        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
+        transitionStyle: "backSlide",
+        center: false,
+    });
+    $(".slider_faculty").owlCarousel({
+        items: 6,
+        responsive: {
+            1200: {
+                item: 6,
+            },
+            992: {
+                items: 4,
+            },
+            768: {
+                items: 3,
+            },
+            480: {
+                items: 3,
+            },
+            0: {
+                items: 3,
+            }
+        },
+        rewind: true,
+        autoplay: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 500,
+        dots: false,
+        dotsEach: false,
+        loop: false,
+        nav: true,
+        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
+        margin: 10,
+        transitionStyle: "backSlide",
+        center: false,
+    });
+    $(".service_slide").owlCarousel({
+        items: 4,
+        responsive: {
+            1200: {
+                item: 4,
+            },
+            992: {
+                items: 3,
+            },
+            768: {
+                items: 2,
+            },
+            480: {
+                items: 2,
+            },
+            0: {
+                items: 2,
+            }
+        },
+        rewind: true,
+        autoplay: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 500,
+        dots: false,
+        dotsEach: false,
+        loop: false,
+        nav: true,
+        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
+        margin: 10,
+        transitionStyle: "backSlide",
+        center: false,
+    });
+    $(".comment_slide").owlCarousel({
+        items: 3,
+        responsive: {
+            1200: {
+                item: 3,
+            },
+            992: {
+                items: 2,
+            },
+            768: {
+                items: 2,
+            },
+            480: {
+                items: 1,
+            },
+            0: {
+                items: 1,
+            }
+        },
+        rewind: true,
+        autoplay: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 500,
+        dots: false,
+        dotsEach: false,
+        loop: false,
+        nav: true,
+        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
+        margin: 10,
+        transitionStyle: "backSlide",
+        center: false,
+    });
+    $(".step_slide").owlCarousel({
+        items: 4,
+        responsive: {
+            1200: {
+                item: 4,
+            },
+            992: {
+                items: 4,
+            },
+            768: {
+                items: 3,
+            },
+            480: {
+                items: 2,
+            },
+            0: {
+                items: 2,
+            }
+        },
+        rewind: true,
+        autoplay: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 500,
+        dots: false,
+        dotsEach: false,
+        loop: false,
+        nav: true,
+        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
+        margin: 10,
+        transitionStyle: "backSlide",
+        center: false,
+    });
+    $(".product_slide").owlCarousel({
+        items: 5,
+        responsive: {
+            1200: {
+                item: 5,
+            },
+            992: {
+                items: 3,
+            },
+            768: {
+                items: 3,
+            },
+            480: {
+                items: 2,
+            },
+            0: {
+                items: 2,
+            }
+        },
+        rewind: true,
+        autoplay: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 500,
+        dots: false,
+        dotsEach: false,
+        loop: false,
+        nav: true,
+        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
+        margin: 10,
+        transitionStyle: "backSlide",
+        center: false,
+    });
+    $(".news_slide").owlCarousel({
+        items: 4,
+        responsive: {
+            1200: {
+                item: 4,
+            },
+            992: {
+                items: 3,
+            },
+            768: {
+                items: 2,
+            },
+            480: {
+                items: 1,
+            },
+            0: {
+                items: 1,
+            }
+        },
+        rewind: true,
+        autoplay: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 500,
+        dots: false,
+        dotsEach: false,
+        loop: false,
+        nav: true,
+        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
+        margin: 10,
+        transitionStyle: "backSlide",
+        center: false,
+    });
+});
 document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
-            document.querySelector('.main-nav').classList.add('fixed-top');
+            $('.main-nav').addClass('fixed-top');
+            $('.menu_bar--mobile').addClass('fixed-top');
+
             // add padding top to show content behind navbar
         } else {
-            document.querySelector('.main-nav').classList.remove('fixed-top');
+            $('.main-nav').removeClass('fixed-top');
+            $('.menu_bar--mobile').removeClass('fixed-top');
             // remove padding top from body
             document.body.style.paddingTop = '0';
         }
     });
 });
-/* const $ = document.querySelector.bind(document); */
-const $$ = document.querySelectorAll.bind(document);
-/* 
-handleSlide('.mySlides', '.dot-item');
-handleSlide('.biet-thu-slide', '.dot-none', '.arrow-left', '.arrow-right', 3, 3000);
- */
-var windowWidth = screen.width;
-screen.orientation.onchange = function(e) {
-    console.log(screen.width);
-}
-console.log(windowWidth);
-handleSlide('.banner .carousel-item', '.dot-none', '.banner .left', '.banner .right', 1, 3000);
-
-function markActive(elements, numberActive) {
-    let Elements = $$(elements);
-}
-
-function handleSlide(mySlides, myDots, prev, next, timeNext = 3000) {
-
-    let slideIndex = 0;
-    let slides = $$(mySlides);
-    let dots = $$(myDots);
-    let length = slides.length;
-    let numberActive = 0;
-    slides.forEach(slide => {
-
-    })
-    if (prev && next) {
-        $(prev).onclick = function(e) {
-            plusSlides(-1);
-        }
-        $(next).onclick = function(e) {
-            plusSlides(+1);
-        }
-    }
-    // Next/previous controls
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    dots.forEach((dot, index) => {
-        dot.onclick = function(e) {
-            showSlides(index)
-        }
-    });
-
-    function showSlides(n) {
-        if (n >= length) { slideIndex = 0 } else if (n < 0) { slideIndex = length - 1 } else { slideIndex = n }
-        slides.forEach((slide, index) => {
-            slide.classList.remove('active');
-            if (dots[index]) {
-                dots[index].classList.remove('active');
-            }
-        })
-        for (let i = 0; i < numberActive; i++) {
-            let tempIndex = slideIndex + i;
-            if (tempIndex >= length) {
-                tempIndex = tempIndex - length;
-            }
-            slides[tempIndex].classList.add('active');
-            if (dots[tempIndex]) {
-                dots[tempIndex].classList.add('active');
-            }
-        }
-    }
-    setInterval(function() {
-        tempIndex = slideIndex + numberActive;
-        if (tempIndex >= length) {
-            tempIndex = tempIndex - length;
-        }
-        showSlides(tempIndex)
-    }, timeNext);
-}
