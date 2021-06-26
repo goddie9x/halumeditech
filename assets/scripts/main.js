@@ -1,20 +1,21 @@
 $(document).ready(function() {
-    $(".menu_bar--mobile").unbind().click(function(e) {
-        $(".nav-scale")[0].classList.toggle("active");
+    $('.menu_bar--mobile').unbind().click(function(e) {
+        $('.nav-scale')[0].classList.toggle('active');
     });
-    $("i.khoa").unbind().click(function(e) {
-        $(".nav_link--slide.khoa").toggle();
+    $('i.khoa').unbind().click(function(e) {
+        $('.nav_link--slide.khoa').toggle();
     });
-    $("i.san-pham").unbind().click(function(e) {
-        $(".nav_link--slide.san-pham").toggle();
+    $('i.san-pham').unbind().click(function(e) {
+        $('.nav_link--slide.san-pham').toggle();
     });
-    $(".add-cart").unbind().click(function(e) {
+    $('.add-cart').unbind().click(function(e) {
         $('.modal.cart').show();
+        $('.popup-add-cart');
     });
     $('.modal-overlay').unbind().click(function() {
         $('.modal.cart').hide();
     })
-    $(".banner .slider_main").owlCarousel({
+    $('.banner .slider_main').owlCarousel({
         items: 1,
         rewind: false,
         autoplay: true,
@@ -25,11 +26,11 @@ $(document).ready(function() {
         dotsEach: false,
         loop: true,
         nav: true,
-        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
-        transitionStyle: "backSlide",
+        navText: [`<img class='btn-slide-left' src='./assets/medias/icon_left.png'>`, `<img class='btn-slide-right' src='./assets/medias/icon_right.png'>`],
+        transitionStyle: 'backSlide',
         center: false,
     });
-    $(".slider_faculty").owlCarousel({
+    $('.slider_faculty').owlCarousel({
         items: 6,
         responsive: {
             1200: {
@@ -57,12 +58,12 @@ $(document).ready(function() {
         dotsEach: false,
         loop: false,
         nav: true,
-        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
+        navText: [`<img class='btn-slide-left' src='./assets/medias/icon_left.png'>`, `<img class='btn-slide-right' src='./assets/medias/icon_right.png'>`],
         margin: 10,
-        transitionStyle: "backSlide",
+        transitionStyle: 'backSlide',
         center: false,
     });
-    $(".service_slide").owlCarousel({
+    $('.service_slide').owlCarousel({
         items: 4,
         responsive: {
             1200: {
@@ -90,12 +91,12 @@ $(document).ready(function() {
         dotsEach: false,
         loop: false,
         nav: true,
-        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
+        navText: [`<img class='btn-slide-left' src='./assets/medias/icon_left.png'>`, `<img class='btn-slide-right' src='./assets/medias/icon_right.png'>`],
         margin: 10,
-        transitionStyle: "backSlide",
+        transitionStyle: 'backSlide',
         center: false,
     });
-    $(".comment_slide").owlCarousel({
+    $('.comment_slide').owlCarousel({
         items: 3,
         responsive: {
             1200: {
@@ -123,12 +124,12 @@ $(document).ready(function() {
         dotsEach: false,
         loop: false,
         nav: true,
-        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
+        navText: [`<img class='btn-slide-left' src='./assets/medias/icon_left.png'>`, `<img class='btn-slide-right' src='./assets/medias/icon_right.png'>`],
         margin: 10,
-        transitionStyle: "backSlide",
+        transitionStyle: 'backSlide',
         center: false,
     });
-    $(".step_slide").owlCarousel({
+    $('.step_slide').owlCarousel({
         items: 4,
         responsive: {
             1200: {
@@ -156,12 +157,12 @@ $(document).ready(function() {
         dotsEach: false,
         loop: false,
         nav: true,
-        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
+        navText: [`<img class='btn-slide-left' src='./assets/medias/icon_left.png'>`, `<img class='btn-slide-right' src='./assets/medias/icon_right.png'>`],
         margin: 10,
-        transitionStyle: "backSlide",
+        transitionStyle: 'backSlide',
         center: false,
     });
-    $(".product_slide").owlCarousel({
+    $('.product_slide').owlCarousel({
         items: 5,
         responsive: {
             993: {
@@ -189,12 +190,12 @@ $(document).ready(function() {
         dotsEach: false,
         loop: false,
         nav: true,
-        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
+        navText: [`<img class='btn-slide-left' src='./assets/medias/icon_left.png'>`, `<img class='btn-slide-right' src='./assets/medias/icon_right.png'>`],
         margin: 10,
-        transitionStyle: "backSlide",
+        transitionStyle: 'backSlide',
         center: false,
     });
-    $(".news_slide").owlCarousel({
+    $('.news_slide').owlCarousel({
         items: 4,
         responsive: {
             1200: {
@@ -222,13 +223,13 @@ $(document).ready(function() {
         dotsEach: false,
         loop: false,
         nav: true,
-        navText: [`<img class="btn-slide-left" src='./assets/medias/icon_left.png'>`, `<img class="btn-slide-right" src='./assets/medias/icon_right.png'>`],
+        navText: [`<img class='btn-slide-left' src='./assets/medias/icon_left.png'>`, `<img class='btn-slide-right' src='./assets/medias/icon_right.png'>`],
         margin: 10,
-        transitionStyle: "backSlide",
+        transitionStyle: 'backSlide',
         center: false,
     });
 });
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
             $('.main-nav').addClass('fixed-top');

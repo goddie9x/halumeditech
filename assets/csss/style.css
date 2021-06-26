@@ -41,17 +41,18 @@ body {
     font-size: 14px;
 }
 
+button,
+button:focus {
+    border: none;
+    outline: none;
+}
+
 
 /*===============================USEABLE==============================*/
 
-
-/* 
 section {
-    padding: 50px 0;
-    margin-bottom: 20px;
-} */
-
-section {
+    margin-top: 20px;
+    padding-top: 40px;
     width: 100%;
 }
 
@@ -549,7 +550,7 @@ a.fixed-right--call img {
 
 .header_topbar {
     font-size: 13px;
-    line-height: 20px;
+    line-height: 30px;
     height: 30px;
     background-color: #3e3e3e;
     color: #fff;
@@ -740,8 +741,22 @@ ul.nav_link--slide li:hover {}
     animation: slide-up .2s linear;
 }
 
+.nav_link--slide:not(.container) li:hover {
+    background: #00792d;
+}
+
+.nav_link--slide:not(.container) li a {
+    color: #fff;
+}
+
 .nav-item:hover .nav_link--slide {
     display: block;
+}
+
+.nav_link--slide.container a {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .nav_link--slide a {
@@ -831,8 +846,8 @@ ul.nav_link--slide li:hover {}
 .service .item {
     border: 1px solid #ddd;
     border-radius: 15px;
-    padding: 15px 15px 5px;
     min-height: 280px;
+    padding-top: 10px;
 }
 
 .service h3 {
@@ -863,7 +878,6 @@ ul.nav_link--slide li:hover {}
 /*===============================SECTION REGISTER=================================*/
 
 .register {
-    margin-top: 10px;
     margin-bottom: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -939,6 +953,10 @@ ul.nav_link--slide li:hover {}
 
 .card-head {
     position: relative;
+}
+
+.card-head .fa {
+    color: #fff;
 }
 
 .comment .card-head::before {
@@ -1163,7 +1181,7 @@ ul.nav_link--slide li:hover {}
 
 /*===============================SECTION NEWS=================================*/
 
-.news.container {
+.news {
     margin-bottom: 0;
     padding-bottom: 40px;
 }
