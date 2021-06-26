@@ -70,10 +70,10 @@ $(document).ready(function() {
                 items: 2,
             },
             480: {
-                items: 2,
+                items: 1,
             },
             0: {
-                items: 2,
+                items: 1,
             }
         },
         rewind: true,
