@@ -583,6 +583,10 @@ a.fixed-right--call img {
     width: 100%;
 }
 
+.header_banner {
+    display: inline-block;
+}
+
 .header_banner img {
     max-height: 70px;
 }

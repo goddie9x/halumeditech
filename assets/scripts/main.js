@@ -12,9 +12,14 @@ $(document).ready(function() {
         $('.modal.cart').show();
         $('.popup-add-cart').show();
     });
+    $('.cart-footer-2 .left').unbind().click(function() {
+        $('.modal.cart').hide();
+        $('.popup-add-cart').hide();
+    });
     $('.modal-overlay').unbind().click(function() {
         $('.modal.cart').hide();
-    })
+        $('.popup-add-cart').hide();
+    });
     $('.fa-close').unbind().click(function() {
         $('.modal.cart').hide();
 
