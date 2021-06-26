@@ -10,10 +10,14 @@ $(document).ready(function() {
     });
     $('.add-cart').unbind().click(function(e) {
         $('.modal.cart').show();
-        $('.popup-add-cart');
+        $('.popup-add-cart').show();
     });
     $('.modal-overlay').unbind().click(function() {
         $('.modal.cart').hide();
+    })
+    $('.fa-close').unbind().click(function() {
+        $('.modal.cart').hide();
+
     })
     $('.banner .slider_main').owlCarousel({
         items: 1,

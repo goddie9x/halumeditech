@@ -1099,12 +1099,30 @@ ul.nav_link--slide li:hover {}
 }
 
 .popup-add-cart {
+    display: none;
+    top: 60px;
+    padding: 20px;
+    position: absolute;
     width: 860px;
     border-radius: 5px;
-    border: 1 solid #039a3b;
+    border: 2px solid #039a3b;
     background: #fff;
-    margin: auto;
     z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fa-close {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    background: #039a3b;
+    color: #fff;
+    padding: 9px;
+    border-radius: 100px;
+    cursor: pointer;
 }
 
 .quick-view,
