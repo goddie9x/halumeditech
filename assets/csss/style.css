@@ -1191,8 +1191,12 @@ ul.nav_link--slide li:hover {}
     color: black;
 }
 
-.item-remove:hover,
-.item-remove:hover .item-remove .fa-times {
+.item-remove:hover {
+    color: #039a3b;
+    cursor: pointer;
+}
+
+.item-remove:hover .fa-times {
     color: #039a3b;
     cursor: pointer;
 }

@@ -16,6 +16,9 @@ $(document).ready(function() {
         $('.modal.cart').hide();
         $('.popup-add-cart').hide();
     });
+    $('.item-remove').unbind().click(function() {
+        this.closest('.item-product').remove();
+    });
     $('.modal-overlay').unbind().click(function() {
         $('.modal.cart').hide();
         $('.popup-add-cart').hide();
