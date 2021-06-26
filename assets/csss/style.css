@@ -1064,6 +1064,31 @@ ul.nav_link--slide li:hover {}
     z-index: 1;
 }
 
+.modal.cart {
+    padding-top: 60px;
+    right: 0;
+    bottom: 0;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-add-cart {
+    width: 860px;
+    border-radius: 5px;
+    border: 1 solid #039a3b;
+    background: #fff;
+    margin: auto;
+    z-index: 2;
+}
+
 .quick-view,
 .add-cart {
     display: none;
@@ -1285,6 +1310,13 @@ ul.nav_link--slide li:hover {}
     .col-2-4 {
         flex: 0 0 auto;
         width: 20%;
+    }
+}
+
+@media (max-width:1125px) {
+    .quick-view,
+    .add-cart {
+        display: none !important;
     }
 }
 

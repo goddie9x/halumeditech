@@ -8,7 +8,12 @@ $(document).ready(function() {
     $("i.san-pham").unbind().click(function(e) {
         $(".nav_link--slide.san-pham").toggle();
     });
-
+    $(".add-cart").unbind().click(function(e) {
+        $('.modal.cart').show();
+    });
+    $('.modal-overlay').unbind().click(function() {
+        $('.modal.cart').hide();
+    })
     $(".banner .slider_main").owlCarousel({
         items: 1,
         rewind: false,
@@ -159,7 +164,7 @@ $(document).ready(function() {
     $(".product_slide").owlCarousel({
         items: 5,
         responsive: {
-            1200: {
+            993: {
                 item: 5,
             },
             992: {
