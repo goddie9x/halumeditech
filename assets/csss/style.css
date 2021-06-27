@@ -644,6 +644,60 @@ a.fixed-right--call img {
     border-radius: 50px;
 }
 
+.header-cart-content {
+    max-height: 260px;
+    overflow-y: scroll;
+}
+
+.header-cart-content::-webkit-scrollbar {
+    width: 4px;
+    background-color: rgb(218, 215, 215);
+}
+
+.header-cart-content::-webkit-scrollbar-thumb {
+    background: #039a3b;
+    border-radius: 40px;
+}
+
+.header-cart-content .item-image {
+    width: 25%;
+}
+
+.header-cart-content .item-info {
+    width: 75%;
+}
+
+.header-cart-content .item-name {
+    width: 80%;
+    display: inline-block;
+    text-align: left;
+}
+
+.header-cart-content .item-remove {
+    width: 20%;
+    display: inline-block;
+}
+
+.header-cart-content .number-products {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.header-cart-footer {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgb(107, 102, 102);
+}
+
+.header-cart-footer .btn {
+    color: #fff;
+    background-color: #039a3b;
+    text-transform: uppercase;
+    margin: 10px auto;
+    border-radius: 0;
+}
+
 .header-user {
     padding: 5px;
     text-align: left;
@@ -1117,6 +1171,40 @@ ul.nav_link--slide li:hover {}
     transform: translate(-50%, -50%);
 }
 
+.popup-quickview {
+    display: none;
+    top: 50%;
+    padding: 20px;
+    position: absolute;
+    width: 990px;
+    border-radius: 5px;
+    border: 2px solid #0f0f0f;
+    background: #fff;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-quickview .item-image {
+    width: 45%;
+}
+
+.popup-quickview .item-image img {
+    width: 100%;
+    margin: 6px;
+}
+
+.popup-quickview .item-info {
+    width: 50%;
+    margin-left: 15px;
+}
+
+.popup-quickview .item-status,
+.popup-quickview .number-products,
+.popup-quickview .item-status {
+    width: 100%;
+}
+
 .content-cart-head {
     text-align: center;
     text-transform: uppercase;
@@ -1170,13 +1258,6 @@ ul.nav_link--slide li:hover {}
     height: 4px;
     background: rgba(0, 0, 0, 0.8);
 }
-
-
-/* 
-.content-cart-body div,
-.item-info {
-    padding: 6px 10px;
-} */
 
 .item-info {
     padding: 6px 15px;

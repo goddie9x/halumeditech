@@ -1,8 +1,6 @@
 var currentNumberSelected = 0;
-
+var sumPrice = 0;
 $(document).ready(function() {
-
-
     $('.banner .slider_main').owlCarousel({
         items: 1,
         rewind: false,
@@ -227,58 +225,55 @@ $('i.san-pham').unbind().click(function(e) {
     $('.nav_link--slide.san-pham').toggle();
 });
 $('.add-cart').unbind().click(function(e) {
-    currentNumberSelected++;
-    $('.modal.cart').show();
-    $('.popup-add-cart').show();
-    $('.cart-popup-quantity').html(`<i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng của bạn (${currentNumberSelected} sản phẩm) <i class="fa fa-caret-right" aria-hidden="true"></i>`);
     let product = this.closest('.card.item');
     let productName = product.querySelector('.card-title h3').innerHTML;
     let imgURL = product.querySelector('img').getAttribute('src');
     let achol = product.querySelector('a.card-title').getAttribute('href')
     let cost = product.querySelector('.cost').innerHTML;
     let productsPopup = $('.item-product');
+    let headerCart = $('.header-cart');
+    let topCartContent = `
+        <div class="item-product product-${currentNumberSelected} clearfix">
+            <a href="${achol}" class="item-image left">
+                <img class="" src="${imgURL}" alt="" class="card-img-top">
+            </a>
+            <div class="item-info">
+                <a href="${achol}" class="item-name left">${productName}</a>
+                <div class="item-remove left">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="price">${cost}</div>
+                     <div class="number-products">
+                        <button class="add-number">-</button>
+                        <input type="text" class="choice-number">
+                        <button class="sub-number">+</button>
+                    </div>
+                </div>
+            </div>
+    `;
+
+    currentNumberSelected++;
+    $('.header-cart-count').html(currentNumberSelected);
+    $('.modal.cart').show();
+    $('.popup-add-cart').show();
+    $('.cart-popup-quantity').html(`<i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng của bạn (${currentNumberSelected} sản phẩm) <i class="fa fa-caret-right" aria-hidden="true"></i>`);
 
     productsPopup.find('.item-recent').remove();
+
+    sumPrice += +cost;
     if (currentNumberSelected == 1) {
-        $('.header-cart').html(`
-        <div class="item-product product-${currentNumberSelected} clearfix">
-                                <a href="${achol}" class="item-image left">
-                                    <img class="" src="${imgURL}" alt="" class="card-img-top">
-                                </a>
-                                <div class="item-info left">
-                                    <a href="#id1" class="item-name">${productName}</a>
-                                    <div class="item-remove" >
-                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                                <div class="price left">${cost}</div>
-                                <div class="number-products left">
-                                    <button class="add-number">-</button>
-                                    <input type="text" class="choice-number">
-                                    <button class="sub-number">+</button>
-                                </div>
-              </div>
-        `);
+        headerCart.html(
+            `<div class="header-cart-content">${topCartContent}</div>
+        <div class="header-cart-footer">
+            <div class="total-price">
+                <div class="left">Tổng tiền tạm tính</div>
+                <div class="right price">${sumPrice}<u>đ</u></div>
+            </div>
+            <div class="do-price btn">Tiến hành thanh toán</div>
+        </div>
+    `);
     } else {
-        $('.header-cart').append(`
-        <div class="item-product product-${currentNumberSelected} clearfix">
-                                <a href="${achol}" class="item-image left">
-                                    <img class="" src="${imgURL}" alt="" class="card-img-top">
-                                </a>
-                                <div class="item-info left">
-                                    <a href="#id1" class="item-name">${productName}</a>
-                                    <div class="item-remove" >
-                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                                <div class="price left">${cost}</div>
-                                <div class="number-products left">
-                                    <button class="add-number">-</button>
-                                    <input type="text" class="choice-number">
-                                    <button class="sub-number">+</button>
-                                </div>
-              </div>
-        `);
+        $('.header-cart-content').append(topCartContent);
     }
 
     $('.content-cart-body').append(`
@@ -323,23 +318,57 @@ document.addEventListener('DOMContentLoaded', function() {
 $('.cart-footer-2 .left').unbind().click(function() {
     $('.modal.cart').hide();
     $('.popup-add-cart').hide();
+
 });
 
 $('.content-cart-popup').delegate('.item-remove', 'click', function() {
     this.closest('.item-product').remove();
     currentNumberSelected--;
+    $('.header-cart-count').html(currentNumberSelected);
 });
 $('.header-cart').delegate('.item-remove', 'click', function() {
-    this.closest('.item-product').remove();
+    let currentProduct = this.closest('.item-product');
+    currentProduct.remove();
     currentNumberSelected--;
     if (currentNumberSelected == 0) {
         $('.header-cart').html('Hiện không có sản phẩm nào');
     }
+    $('.header-cart-count').html(currentNumberSelected);
 });
 $('.modal-overlay').unbind().click(function() {
     $('.modal.cart').hide();
     $('.popup-add-cart').hide();
+    $('.popup-quickview').hide();
 });
 $('.fa-close').unbind().click(function() {
     $('.modal.cart').hide();
+});
+$('.quick-view').click(function(e) {
+    let popupQuickView = $('.popup-quickview');
+    let product = this.closest('.card.item');
+    let productName = product.querySelector('.card-title h3').innerHTML;
+    let imgURL = product.querySelector('img').getAttribute('src');
+    let achol = product.querySelector('a.card-title').getAttribute('href')
+    let cost = product.querySelector('.cost').innerHTML;
+
+    $('.modal.cart').show();
+    popupQuickView.html(`<div class="item-product product-${currentNumberSelected} clearfix">
+    <a href="${achol}" class="item-image left">
+        <img class="" src="${imgURL}" alt="" class="card-img-top">
+    </a>
+    <div class="item-info left">
+        <a href="#id1" class="item-name">${productName}</a>
+        <div class="item-status">
+            <div class="item-trademark left">Thương hiệu: <span class="price">Chưa có</span></div>
+            <div class="item-status-still"> <span class="price">Tình trạng: </span>Còn hàng</div>
+        </div>
+        <div class="price">${cost}</div>
+        <div class="number-products">
+            <button class="add-number">-</button>
+            <input type="text" class="choice-number">
+            <button class="sub-number">+</button>
+        </div>
+    </div>
+</div>`)
+    popupQuickView.show();
 });
