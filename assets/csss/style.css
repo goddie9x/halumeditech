@@ -1712,6 +1712,9 @@ ul.nav_link--slide li:hover {}
         height: 24px;
         cursor: pointer;
     }
+    .fa-bars {
+        background-color: #fff;
+    }
     .menu_bar--mobile.fixed-top {
         position: fixed;
         top: -20px;
@@ -1777,6 +1780,9 @@ ul.nav_link--slide li:hover {}
 }
 
 @media (max-width: 576px) {
+    .main-nav .container {
+        padding: 0;
+    }
     .col-sm {
         flex: 1 0 0%;
     }
