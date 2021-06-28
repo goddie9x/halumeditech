@@ -1596,6 +1596,7 @@ ul.nav_link--slide li:hover {}
 .footer-widget .fa-plus {
     position: absolute;
     right: 10px;
+    display: none;
 }
 
 .fa-plus.sub::before {
@@ -1779,6 +1780,9 @@ ul.nav_link--slide li:hover {}
     }
     .footer-widget {
         margin-bottom: 20px;
+    }
+    .footer-widget .fa-plus {
+        display: inline;
     }
     .list-col {
         margin-bottom: 15px;
