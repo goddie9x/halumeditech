@@ -1006,6 +1006,7 @@ ul.nav_link--slide li:hover {}
 
 .comment .item img {
     width: 90px;
+    height: 90px;
     border-radius: 300px;
     border: 2px solid #fff;
     margin-right: 10px;
@@ -1261,10 +1262,6 @@ ul.nav_link--slide li:hover {}
     font-size: 20px;
     font-weight: bold;
     opacity: .4;
-}
-
-.popup-quickview .add-number {
-    transform: scaleX(2);
 }
 
 .popup-quickview .btn {
@@ -1589,11 +1586,20 @@ ul.nav_link--slide li:hover {}
 }
 
 .footer-widget h4 {
-    color: rgb(97, 252, 155);
+    color: #00792d;
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 700;
     position: relative;
+}
+
+.footer-widget .fa-plus {
+    position: absolute;
+    right: 10px;
+}
+
+.fa-plus.sub::before {
+    content: '\f2d1';
 }
 
 .list-row i {
@@ -1606,6 +1612,8 @@ ul.nav_link--slide li:hover {}
 .list-row a :hover {
     color: #039a3b;
 }
+
+.list-col-toggle {}
 
 .list-col {
     margin-bottom: 15px;
@@ -1768,6 +1776,18 @@ ul.nav_link--slide li:hover {}
     }
     .register img {
         max-height: 20px;
+    }
+    .footer-widget {
+        margin-bottom: 20px;
+    }
+    .list-col {
+        margin-bottom: 15px;
+        line-height: 1.71429em;
+        font-size: 14px;
+        display: none;
+    }
+    .list-col.active {
+        display: block;
     }
 }
 

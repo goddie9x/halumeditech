@@ -382,3 +382,8 @@ $('.quick-view').click(function(e) {
 </div>`)
     popupQuickView.show();
 });
+$('.footer-widget h4').unbind().click(function(e) {
+    let footerWidget = this.closest('.footer-widget').querySelector('.list-col');
+    footerWidget.classList.toggle('active');
+    this.querySelector('.fa-plus').classList.toggle('sub');
+});
