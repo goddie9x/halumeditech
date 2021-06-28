@@ -340,8 +340,10 @@ $('.modal-overlay').unbind().click(function() {
     $('.popup-add-cart').hide();
     $('.popup-quickview').hide();
 });
-$('.fa-close').unbind().click(function() {
+$('.modal.cart').delegate('.fa-close', 'click', function() {
     $('.modal.cart').hide();
+    $('.popup-add-cart').hide();
+    $('.popup-quickview').hide();
 });
 $('.quick-view').click(function(e) {
     let popupQuickView = $('.popup-quickview');
@@ -353,21 +355,29 @@ $('.quick-view').click(function(e) {
 
     $('.modal.cart').show();
     popupQuickView.html(`<div class="item-product product-${currentNumberSelected} clearfix">
+    <div class="fa fa-close"></div>
     <a href="${achol}" class="item-image left">
         <img class="" src="${imgURL}" alt="" class="card-img-top">
     </a>
-    <div class="item-info left">
-        <a href="#id1" class="item-name">${productName}</a>
+    <div class="item-info">
+        <a href="${achol}" class="item-name">${productName}</a>
         <div class="item-status">
-            <div class="item-trademark left">Thương hiệu: <span class="price">Chưa có</span></div>
-            <div class="item-status-still"> <span class="price">Tình trạng: </span>Còn hàng</div>
+            <span class="item-trademark ">Thương hiệu: <span class="price">Chưa có</span></span>
+            <span class="item-status-still ">Tình trạng:  <span class="price">Còn hàng</span></span>
         </div>
         <div class="price">${cost}</div>
+        <div class="product-desc">
+            <div class="item-detail">
+            Máy tạo oxy Sysmed M50 Giới thiệu sản phẩm Máy tạo oxy là thiết bị cung cấp oxy cần thiết giúp quá trình hô hấp của bệnh nhân được tốt hơn. Máy tạo oxy M50 của Sysmed được cải tiến với thiết kế nhỏ gọn, tiết kiệm chi phí hơn so với các sản phẩm truyền thống.   Bộ sản phẩm chuẩn Máy tạo oxy Sysmed M50   Phụ kiện bao gồm: thân máy, bình tạo ẩm, dây thở, 2 bộ lọc (bộ lọc thô, bộ lọc đầu vào oxy), 2 ống nối bình tạo ẩm, sách HDSD. Phụ kiện Máy tạo oxy Sysmed M50 Thông số kỹ thuật Lưu lượng oxy: 0.5 - 5 lít/phút Dung tích: 5 lít Phương pháp phân bố: liên tục Độ tinh khiết: 93 +/-3% Áp suất khí quyển: 500-1060 hPa Báo động độ tinh khiết: oxy thấp 82%   Áp suất ngõ ra: 0.05 +/-0.005 Mpa Độ ồn: < 45 dB Tính năng bổ sung: đầu nối kim loại chống cháy Công suất: 300W Điện áp: 220V / 50Hz Kích thước: 442 x 282 x 725 mm Trọng lượng: 14 kg
+            </div>
+            <a href="${achol}" class="item-more">Chi tiết ></a>
+        </div>
         <div class="number-products">
             <button class="add-number">-</button>
             <input type="text" class="choice-number">
             <button class="sub-number">+</button>
         </div>
+        <div class="buy btn">Mua hàng</div>
     </div>
 </div>`)
     popupQuickView.show();
