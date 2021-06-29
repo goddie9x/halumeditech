@@ -218,11 +218,11 @@ $(document).ready(function() {
 $('.menu_bar--mobile').unbind().click(function(e) {
     $('.nav-scale')[0].classList.toggle('active');
 });
-$('i.khoa').unbind().click(function(e) {
-    $('.nav_link--slide.khoa').toggle();
-});
-$('i.san-pham').unbind().click(function(e) {
-    $('.nav_link--slide.san-pham').toggle();
+$('.fa-angle-down').click(function(e) {
+    e.preventDefault();
+
+    console.log(this.parentNode.querySelector('.nav_link--slide'))
+    this.parentNode.querySelector('.nav_link--slide').classList.toggle('active');
 });
 $('.add-cart').unbind().click(function(e) {
     let product = this.closest('.card.item');
