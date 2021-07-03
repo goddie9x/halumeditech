@@ -1,5 +1,29 @@
 var currentNumberSelected = 0;
 var sumPrice = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            $('.main-nav').addClass('fixed-top');
+            $('.logo').addClass('fixed-top');
+
+            $('.header').append(`
+                <div class="scroll-to-top">
+                <i class="fa fa-level-up"></i>
+                </div>
+            `);
+            // add padding top to show content behind navbar
+        } else {
+            $('.main-nav').removeClass('fixed-top');
+            $('.logo').removeClass('fixed-top');
+            // remove padding top from body
+            document.body.style.paddingTop = '0';
+            $('.scroll-to-top').remove();
+        }
+    });
+});
+activeEvent('.scroll-to-top', function(e) {
+    $(window).scrollTop({ top: 0, behavior: 'smooth' });
+}, '.header');
 $(document).ready(function() {
     $('.banner .slider_main').owlCarousel({
         items: 1,
@@ -214,18 +238,31 @@ $(document).ready(function() {
         transitionStyle: 'backSlide',
         center: false,
     });
-});
-$('.menu_bar--mobile').unbind().click(function(e) {
-    $('.nav-scale')[0].classList.toggle('active');
-});
-$('.fa-angle-down').click(function(e) {
-    e.preventDefault();
+    $('.zoom-img').ezPlus({
+        scrollZoom: true,
+        zoomWindowWidth: 400,
+        zoomWindowHeight: 500,
+        minZoomLevel: 0.1,
+        responsive: true,
+        gallery: 'gall',
+        imageCrossfade: true,
+        cursor: 'pointer',
+        galleryActiveClass: 'active'
+    });
+    $('.zoom-img').bind('click', function(e) {
+        var ez = $('.zoom-img').data('ezPlus');
+        $.fancyboxPlus(ez.getGalleryList());
+        return false;
+    });
 
-    console.log(this.parentNode.querySelector('.nav_link--slide'))
-    this.parentNode.querySelector('.nav_link--slide').classList.toggle('active');
 });
-$('.add-cart').unbind().click(function(e) {
-    let product = this.closest('.card.item');
+activeEvent('.menu_bar--mobile', '.nav-scale');
+activeEvent('.fa-angle-down', function(e) {
+    e.preventDefault();
+    $(e.target).parent().next().toggleClass('active');
+});
+activeEvent('.add-cart', function(e) {
+    let product = e.target.closest('.card.item');
     let productName = product.querySelector('.card-title h3').innerHTML;
     let imgURL = product.querySelector('img').getAttribute('src');
     let achol = product.querySelector('a.card-title').getAttribute('href')
@@ -298,56 +335,42 @@ $('.add-cart').unbind().click(function(e) {
           </div>
     `);
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            $('.main-nav').addClass('fixed-top');
-            $('.menu_bar--mobile').addClass('fixed-top');
-
-            // add padding top to show content behind navbar
-        } else {
-            $('.main-nav').removeClass('fixed-top');
-            $('.menu_bar--mobile').removeClass('fixed-top');
-            // remove padding top from body
-            document.body.style.paddingTop = '0';
-        }
-    });
-});
-
-$('.cart-footer-2 .left').unbind().click(function() {
+activeEvent('.cart-footer-2 .left', function() {
     $('.modal.cart').hide();
     $('.popup-add-cart').hide();
-
 });
-
-$('.content-cart-popup').delegate('.item-remove', 'click', function() {
-    this.closest('.item-product').remove();
+activeEvent('.item-remove', function(e) {
+    e.target.closest('.item-product').remove();
     currentNumberSelected--;
     $('.header-cart-count').html(currentNumberSelected);
 });
-$('.header-cart').delegate('.item-remove', 'click', function() {
-    let currentProduct = this.closest('.item-product');
+activeEvent('.item-remove', function(e) {
+    e.target.closest('.item-product').remove();
+    currentNumberSelected--;
+    $('.header-cart-count').html(currentNumberSelected);
+}, '.content-cart-popup');
+activeEvent('.item-remove', function(e) {
+    let currentProduct = e.target.closest('.item-product');
     currentProduct.remove();
     currentNumberSelected--;
     if (currentNumberSelected == 0) {
         $('.header-cart').html('Hiện không có sản phẩm nào');
     }
     $('.header-cart-count').html(currentNumberSelected);
-});
-$('.modal-overlay').unbind().click(function() {
+}, '.header-cart');
+activeEvent('.modal-overlay', function() {
     $('.modal.cart').hide();
     $('.popup-add-cart').hide();
     $('.popup-quickview').hide();
 });
-$('.modal.cart').delegate('.fa-close', 'click', function() {
+activeEvent('.fa-close', function() {
     $('.modal.cart').hide();
     $('.popup-add-cart').hide();
     $('.popup-quickview').hide();
-});
-$('.quick-view').click(function(e) {
+}, '.modal.cart');
+activeEvent('.quick-view', function(e) {
     let popupQuickView = $('.popup-quickview');
-    let product = this.closest('.card.item');
+    let product = e.target.closest('.card.item');
     let productName = product.querySelector('.card-title h3').innerHTML;
     let imgURL = product.querySelector('img').getAttribute('src');
     let achol = product.querySelector('a.card-title').getAttribute('href')
@@ -382,8 +405,71 @@ $('.quick-view').click(function(e) {
 </div>`)
     popupQuickView.show();
 });
-$('.footer-widget h4').unbind().click(function(e) {
+activeEvent('.footer-widget h4', function(e) {
     let footerWidget = this.closest('.footer-widget').querySelector('.list-col');
     footerWidget.classList.toggle('active');
     this.querySelector('.fa-plus').classList.toggle('sub');
 });
+activeEvent('.mode-view-column', function(e) {
+    $('.mode-view-column').addClass('active');
+    $('.mode-view-grid').removeClass('active');
+
+    replaceClass('.card.item', 'col-lg-3 col-md-4 col-sm-6', 'col-12');
+    replaceClass('.card-head', '', 'col-4');
+});
+activeEvent('.filter-mb', function(e) {
+    $('.filter').toggleClass('active', 'col-3');
+});
+activeEvent('.mode-view-grid', function(e) {
+    $('.mode-view-grid').addClass('active');
+    $('.mode-view-column').removeClass('active');
+    replaceClass('.card.item', 'col-12', 'col-lg-3 col-md-4 col-sm-6');
+    replaceClass('.card-head', 'col-4', '');
+});
+//library activeEvent made by Tam
+function activeEvent(elementTriggers, Targets, elementContainer, event = 'click') {
+    if (elementContainer) {
+        if (typeof(Targets) == 'function') {
+            $(elementContainer).delegate(elementTriggers, event, function(e) {
+                Targets(e);
+            });
+        } else {
+            $(elementContainer).delegate(elementTriggers, event, function(e) {
+                $(Targets).toggleClass('active');
+            });
+        }
+    } else {
+        let trigger = $(elementTriggers).unbind();
+
+        if (trigger) {
+            if (typeof(Targets) == 'function') {
+                trigger.on(event, function(e) {
+                    Targets(e);
+                });
+            } else {
+                trigger.on(event, function(e) {
+                    $('.nav-scale').toggleClass('active');
+                });
+            }
+        }
+    }
+}
+
+function replaceClass(element, classNeedReplace, classReplace) {
+    let elementTarget = $(element);
+
+    elementTarget.removeClass(classNeedReplace);
+    elementTarget.addClass(classReplace);
+}
+
+function add3Dots(string, limit, height, lineHeight, fontWeight, replace = '...') {
+    let maxLength = limit - 3;
+
+    if (string.length > maxLength) {
+        string = string.slice(0, maxLength) + replace;
+    }
+
+    return string;
+}
+
+$('.filter-card-list .item-name').html(add3Dots('Nhiệt kế điện tử hồng ngoại Bosotherm Medical', 35));

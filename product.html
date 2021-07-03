@@ -18,7 +18,6 @@
     <script src="./assets/outSouces/scripts/owl.carousel.js"></script>
     <script src="./assets/outSouces/scripts/owl.carousel.min.js"></script>
     <script src="./assets/outSouces/scripts/slick.min.js"></script>
-    <script src="./assets/scripts/main.js"></script>
     <script src="https://kit.fontawesome.com/4df1339666.js" crossorigin="anonymous"></script>
     <title>Halumeditec</title>
 </head>
@@ -38,10 +37,10 @@
         <div class="header_middle">
             <div class="container">
                 <div class="header_main ">
-                    <div class="menu_bar--mobile hidden-lg left">
-                        <i class="fa fa-bars"></i>
-                    </div>
                     <div class="logo col-auto left">
+                        <div class="menu_bar--mobile hidden-lg left">
+                            <i class="fa fa-bars"></i>
+                        </div>
                         <a href="#" title="halumeditec">
                             <img src="./assets/medias/logo.png" alt="">
                         </a>
@@ -187,43 +186,80 @@
         <section class="main-content">
             <div class="container">
                 <div class="row">
-                    <div class="filter col-3">
-                        <div class="filter-card">
-                            <div class="filter-card--title">danh mục</div>
-                            <div class="filter-card-list nav-scale">
-                                <a href="./home.html" class="nav_link current-page">trang chủ</a>
-                                <a href="#" class="nav_link">giới thiệu</a>
-                                <a href="#" class="nav_link slide">chuyên khoa <i class="fa fa-angle-down khoa" aria-hidden="true"></i></a>
-                                <div class="nav_link--slide khoa">
-                                    <a href="#">Khoa nội</a>
-                                    <a href="#">Khoa ngoại</a>
-                                    <a href="#">Khoa mắt</a>
-                                    <a href="#">Khoa da liễu</a>
-                                    <a href="#">Khoa nhi</a>
-                                    <a href="#">Khoa tai mũi họng</a>
-                                    <a href="#">Khoa răng hàm mặt</a>
-                                    <a href="#">Khoa sản</a>
+                    <div class="filter_table col-3">
+                        <div class="filter-mb"><i class="fa fa-filter"></i></div>
+                        <div class="filter ">
+                            <div class="filter-card">
+                                <div class="filter-card--title">danh mục</div>
+                                <div class="filter-card-list nav-scale">
+                                    <a href="./home.html" class="nav_link ">Trang chủ</a>
+                                    <a href="#" class="nav_link">Giới thiệu</a>
+                                    <a href="#" class="nav_link slide">Chuyên khoa <i class="fa fa-angle-down khoa" aria-hidden="true"></i></a>
+                                    <div class="nav_link--slide khoa">
+                                        <a href="#">Khoa nội</a>
+                                        <a href="#">Khoa ngoại</a>
+                                        <a href="#">Khoa mắt</a>
+                                        <a href="#">Khoa da liễu</a>
+                                        <a href="#">Khoa nhi</a>
+                                        <a href="#">Khoa tai mũi họng</a>
+                                        <a href="#">Khoa răng hàm mặt</a>
+                                        <a href="#">Khoa sản</a>
+                                    </div>
+                                    <a href="./product.html" class="nav_link slide current-page">Sản phẩm <i class="fa fa-angle-down san-pham" aria-hidden="true"></i></a>
+                                    <div class="nav_link--slide san-pham">
+                                        <a href="#">Sản phẩm mới</a>
+                                        <a href="#">Sản phẩm nổi bật</a>
+                                        <a href="#">Sản phẩm khuyến mại</a>
+                                    </div>
+                                    <a href="#" class="nav_link">Tin tức</a>
+                                    <a href="#" class="nav_link">Liên hệ</a>
                                 </div>
-                                <a href="./product.html" class="nav_link slide">sản phẩm <i class="fa fa-angle-down san-pham" aria-hidden="true"></i></a>
-                                <div class="nav_link--slide san-pham">
-                                    <a href="#">Sản phẩm mới</a>
-                                    <a href="#">Sản phẩm nổi bật</a>
-                                    <a href="#">Sản phẩm khuyến mại</a>
+                            </div>
+                            <div class="filter-card">
+                                <div class="filter-card--title">bộ lọc</div>
+                                <div class="filter-card-list nav-scale">
+                                    <div class="selected">
+                                        <div class="selected-nav">
+                                            <div class="left"><i class="fa fa-arrow-left hidden-sm-up"></i> Bạn chọn</div>
+                                            <div class="right">Bỏ hết ></div>
+                                        </div>
+                                        <a href="" class="nav_link clearfix"><i class="fa fa-times"></i> 200.000đ - 300.000đ</a>
+                                    </div>
+                                    <div class="price-filter">
+                                        <a href="" class="nav_link">
+                                            <input type="checkbox" value="100000">Giá dưới 100.000đ
+                                        </a>
+                                        <a href="" class="nav_link">
+                                            <input type="checkbox" value="100000">Giá dưới 100.000đ
+                                        </a>
+                                        <a href="" class="nav_link">
+                                            <input type="checkbox" value="100000">Giá dưới 100.000đ
+                                        </a>
+                                        <a href="" class="nav_link">
+                                            <input type="checkbox" value="100000">Giá dưới 100.000đ
+                                        </a>
+                                        <a href="" class="nav_link">
+                                            <input type="checkbox" value="100000">Giá dưới 100.000đ
+                                        </a>
+                                        <a href="" class="nav_link">
+                                            <input type="checkbox" value="100000">Giá dưới 100.000đ
+                                        </a>
+                                    </div>
                                 </div>
-                                <a href="#" class="nav_link">tin tức</a>
-                                <a href="#" class="nav_link">liên hệ</a>
                             </div>
-                        </div>
-                        <div class="filter-card">
-                            <div class="filter-card--title"></div>
-                            <div class="filter-card-list">
-
-                            </div>
-                        </div>
-                        <div class="filter-card">
-                            <div class="filter-card--title"></div>
-                            <div class="filter-card-list">
-
+                            <div class="filter-card">
+                                <div class="filter-card--title">sản phẩm hot</div>
+                                <div class="filter-card-list">
+                                    <div class="item-product clearfix">
+                                        <a href="${achol}" class="item-image left">
+                                            <img class="" src="./assets/medias/21543227785-nv.png" alt="" class="card-img-top">
+                                        </a>
+                                        <div class="item-info">
+                                            <a href="${achol}" class="item-name left">Nhiệt kế điện tử hồng ngoại Bosotherm Medical</a>
+                                            <div class="price">1.250.000đ</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -231,9 +267,9 @@
                         <div class="product-sort container">
                             <div class="btn left mode-view-grid"><i class="fa fa-th"></i></div>
                             <div class="btn left mode-view-column"><i class="fa fa-th-list"></i></div>
-                            <class class="select-sort right">
+                            <class class="select-sort right ">
                                 <div class="label-select-sort">Sắp xếp</div>
-                                <a class="nav_link slide">Thứ tự<i class="fa fa-angle-down khoa" aria-hidden="true"></i></a>
+                                <div class="nav_link slide">Thứ tự<i class="fa fa-angle-down" aria-hidden="true"></i></div>
                                 <div class="nav_link-content">
                                     <a href="#">Mặc định</a>
                                     <a href="#">A → Z</a>
@@ -264,6 +300,7 @@
                                     <a href="" class="card-title">
                                         <h3>Nhiệt kế điện tử hồng ngoại Bosotherm Medical</h3>
                                     </a>
+                                    <div class="more-detail">Nhiệt kế điện tử hồng ngoại Bosotherm Medical Giới thiệu sản phẩm Nhiệt kế đo tai điện tử...</div>
                                     <div class="cost ">1.250.000<u>đ</u></div>
                                     <div class="old-price">2.000.000<u>đ</u></div>
                                 </div>
@@ -286,6 +323,7 @@
                                     <a href="" class="card-title">
                                         <h3>Nhiệt kế điện tử hồng ngoại Bosotherm Medical</h3>
                                     </a>
+                                    <div class="more-detail">Nhiệt kế điện tử hồng ngoại Bosotherm Medical Giới thiệu sản phẩm Nhiệt kế đo tai điện tử...</div>
                                     <div class="cost ">1.250.000<u>đ</u></div>
                                     <div class="old-price">2.000.000<u>đ</u></div>
                                 </div>
@@ -308,6 +346,7 @@
                                     <a href="" class="card-title">
                                         <h3>Nhiệt kế điện tử hồng ngoại Bosotherm Medical</h3>
                                     </a>
+                                    <div class="more-detail">Nhiệt kế điện tử hồng ngoại Bosotherm Medical Giới thiệu sản phẩm Nhiệt kế đo tai điện tử...</div>
                                     <div class="cost ">1.250.000<u>đ</u></div>
                                     <div class="old-price">2.000.000<u>đ</u></div>
                                 </div>
@@ -330,6 +369,7 @@
                                     <a href="" class="card-title">
                                         <h3>Nhiệt kế điện tử hồng ngoại Bosotherm Medical</h3>
                                     </a>
+                                    <div class="more-detail">Nhiệt kế điện tử hồng ngoại Bosotherm Medical Giới thiệu sản phẩm Nhiệt kế đo tai điện tử...</div>
                                     <div class="cost ">1.250.000<u>đ</u></div>
                                     <div class="old-price">2.000.000<u>đ</u></div>
                                 </div>
@@ -352,6 +392,7 @@
                                     <a href="" class="card-title">
                                         <h3>Nhiệt kế điện tử hồng ngoại Bosotherm Medical</h3>
                                     </a>
+                                    <div class="more-detail">Nhiệt kế điện tử hồng ngoại Bosotherm Medical Giới thiệu sản phẩm Nhiệt kế đo tai điện tử...</div>
                                     <div class="cost ">1.250.000<u>đ</u></div>
                                     <div class="old-price">2.000.000<u>đ</u></div>
                                 </div>
@@ -374,6 +415,7 @@
                                     <a href="" class="card-title">
                                         <h3>Nhiệt kế điện tử hồng ngoại Bosotherm Medical</h3>
                                     </a>
+                                    <div class="more-detail">Nhiệt kế điện tử hồng ngoại Bosotherm Medical Giới thiệu sản phẩm Nhiệt kế đo tai điện tử...</div>
                                     <div class="cost ">1.250.000<u>đ</u></div>
                                     <div class="old-price">2.000.000<u>đ</u></div>
                                 </div>
@@ -396,6 +438,7 @@
                                     <a href="" class="card-title">
                                         <h3>Nhiệt kế điện tử hồng ngoại Bosotherm Medical</h3>
                                     </a>
+                                    <div class="more-detail">Nhiệt kế điện tử hồng ngoại Bosotherm Medical Giới thiệu sản phẩm Nhiệt kế đo tai điện tử...</div>
                                     <div class="cost ">1.250.000<u>đ</u></div>
                                     <div class="old-price">2.000.000<u>đ</u></div>
                                 </div>
@@ -418,6 +461,7 @@
                                     <a href="" class="card-title">
                                         <h3>Nhiệt kế điện tử hồng ngoại Bosotherm Medical</h3>
                                     </a>
+                                    <div class="more-detail">Nhiệt kế điện tử hồng ngoại Bosotherm Medical Giới thiệu sản phẩm Nhiệt kế đo tai điện tử...</div>
                                     <div class="cost ">1.250.000<u>đ</u></div>
                                     <div class="old-price">2.000.000<u>đ</u></div>
                                 </div>
@@ -440,6 +484,7 @@
                                     <a href="" class="card-title">
                                         <h3>Nhiệt kế điện tử hồng ngoại Bosotherm Medical</h3>
                                     </a>
+                                    <div class="more-detail">Nhiệt kế điện tử hồng ngoại Bosotherm Medical Giới thiệu sản phẩm Nhiệt kế đo tai điện tử...</div>
                                     <div class="cost ">1.250.000<u>đ</u></div>
                                     <div class="old-price">2.000.000<u>đ</u></div>
                                 </div>
@@ -462,6 +507,7 @@
                                     <a href="" class="card-title">
                                         <h3>Nhiệt kế điện tử hồng ngoại Bosotherm Medical</h3>
                                     </a>
+                                    <div class="more-detail">Nhiệt kế điện tử hồng ngoại Bosotherm Medical Giới thiệu sản phẩm Nhiệt kế đo tai điện tử...</div>
                                     <div class="cost ">1.250.000<u>đ</u></div>
                                     <div class="old-price">2.000.000<u>đ</u></div>
                                 </div>
@@ -484,6 +530,7 @@
                                     <a href="" class="card-title">
                                         <h3>Nhiệt kế điện tử hồng ngoại Bosotherm Medical</h3>
                                     </a>
+                                    <div class="more-detail">Nhiệt kế điện tử hồng ngoại Bosotherm Medical Giới thiệu sản phẩm Nhiệt kế đo tai điện tử...</div>
                                     <div class="cost ">1.250.000<u>đ</u></div>
                                     <div class="old-price">2.000.000<u>đ</u></div>
                                 </div>
@@ -506,8 +553,44 @@
                                     <a href="" class="card-title">
                                         <h3>Nhiệt kế điện tử hồng ngoại Bosotherm Medical</h3>
                                     </a>
+                                    <div class="more-detail">Nhiệt kế điện tử hồng ngoại Bosotherm Medical Giới thiệu sản phẩm Nhiệt kế đo tai điện tử...</div>
                                     <div class="cost ">1.250.000<u>đ</u></div>
                                     <div class="old-price">2.000.000<u>đ</u></div>
+                                </div>
+                            </div>
+                            <div class="modal cart">
+                                <div class="modal-overlay"></div>
+                                <div class=" popup-add-cart">
+                                    <div class="fa fa-close"></div>
+                                    <div class="title-popup-cart">
+                                        <i class="fa fa-check" aria-hidden="true"></i> Bạn đã thêm
+                                        <a href="" class="cart-title">
+                                            Máy đo đường huyết Medismart Sapphire Plus
+                                        </a> vào giỏ hàng
+                                    </div>
+                                    <a class="cart-popup-quantity "><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng của bạn (1 sản phẩm) <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                    <div class="content-cart-popup">
+                                        <div class="content-cart-head">
+                                            <div style="width: 55%;" class="left">Sản phẩm</div>
+                                            <div style="width: 15%;" class="left">Đơn giá</div>
+                                            <div style="width: 15%;" class="left">Số lượng</div>
+                                            <div style="width: 15%;" class="left clearfix">Thành tiền</div>
+                                        </div>
+                                        <div class="content-cart-body">
+                                        </div>
+                                        <div class="content-cart-footer">
+                                            <div class="cart-footer-1 clearfix">
+                                                <div class="left">Giao hàng toàn quốc</div>
+                                                <div class="right ">Thành tiền: <span class="total-price price">1.250.000<u>đ</u></span></div>
+                                            </div>
+                                            <div class="cart-footer-2 clearfix">
+                                                <a class="left"><i class="fa fa-caret-left" aria-hidden="true"></i> Tiếp tục mua hàng</a>
+                                                <div class="right btn">Tiến hành đặt hàng <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="popup-quickview">
                                 </div>
                             </div>
                             <ul class="pagination">
@@ -589,6 +672,8 @@
             </span>
         </div>
     </footer>
+    <script src="./assets/scripts/main.js"></script>
+
 </body>
 
 </html>
