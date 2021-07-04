@@ -209,7 +209,7 @@
                             </a>
                             <div class="star">
                                 <i class="fa fa-star" style="color: #d1a537;"></i> <i class="fa fa-star" style="color: #d1a537;"></i> <i class="fa fa-star" style="color: #d1a537;"></i> <i class="fa fa-star" style="color: #d1a537;"></i> <i class="fa fa-star"
-                                    style="color: #d1a537;"></i> Viết đánh giá của bạn
+                                    style="color: #d1a537;"></i> <a href="#">Viết đánh giá của bạn</a>
                             </div>
                             <div class="item-status">
                                 <span class="item-trademark ">Thương hiệu: <span class="price">Chưa có</span></span>
@@ -276,27 +276,93 @@
                     <div role="tabpanel" class="tab-pane active" id="product_details">Nội dung sản phẩm</div>
                     <div role="tabpanel" class="tab-pane" id="policy">Nội dung tuỳ chỉnh viết ở đây</div>
                     <div role="tabpanel" class="tab-pane" id="product_rate">
-                        <div class="rateting-header">
-                            <div class="rating-averaged">
-                                <div class="star-by-number"></div>
-                                <div class="star-rate"></div>
-                                <div class="rateting-count">(x đánh giá)</div>
-                            </div>
-                            <div class="rating-content">
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="active"><a href="#product_details" aria-controls="home" role="tab" data-toggle="tab">thông tin sản phẩm</a></li>
-                                    <li role="presentation"><a href="#policy" aria-controls="profile" role="tab" data-toggle="tab">chính sách</a></li>
-                                    <li role="presentation"><a href="#product_rate" aria-controls="messages" role="tab" data-toggle="tab">đánh giá sản phẩm</a></li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane active" id="product_details">Nội dung sản phẩm</div>
-                                    <div role="tabpanel" class="tab-pane" id="policy">Nội dung tuỳ chỉnh viết ở đây</div>
-                                    <div role="tabpanel" class="tab-pane" id="product_rate">
+                        <div class="rating-header ">
+                            <div class="rating-averaged left">
+                                <div class="rate-info">
+                                    <div class="star-by-number">5/5</div>
+                                    <div class="star-rate"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+                                    <div class="rateting-count">(x đánh giá)</div>
+                                </div>
+                                <div class="rate-btn">
+                                    <div class="rating-filter-mb btn">
+                                        <div class="rating-filter-btn">
+                                            <i class="fa fa-filter" aria-hidden="true"></i> Bộ lọc
+                                        </div>
+                                        <div class="rate-table-choice">
+                                            <div class="active"><input id="rate-all" type="radio" name="choice-rate"><label for="rate-all">Tất cả</label></div>
+                                            <div><input id="rate-5" type="radio" name="choice-rate"><label for="rate-5">5 điểm <span class="rate-count">(1)</span></label></div>
+                                            <div><input id="rate-4" type="radio" name="choice-rate"><label for="rate-4">4 điểm <span class="rate-count">(1)</a></div>
+                                            <div  class="active"><input id="rate-3" type="radio" name="choice-rate"><label for="rate-3" >5 điểm <span class="rate-count">(1)</span></label> </div>
+                                            <div><input id="rate-2" type="radio" name="choice-rate"><label for="rate-2">2 điểm <span class="rate-count">(1)</span></label></div>
+                                            <div><input id="rate-1" type="radio" name="choice-rate"><label for="rate-1">1 điểm <span class="rate-count">(1)</span></label></div>
+                                        </div>
+                                    </div>
+                                    <div class="create-rate btn">Gửi đánh giá của bạn</div>
+                                    <div class="modal rate-creating">
+                                        <div class="modal-overlay"></div>
+                                        <div class="popup-rate-creating">
+                                            <div class="fa fa-close"></div>
+                                            <div class="rate-popup-head">
+                                                <div class="rate-title">Đánh giá sản phẩm</div>
+                                                <div class="name-product">
+                                                    Máy đo đường huyết Medismart Sapphire Plus
+                                                </div>
+                                            </div>
+                                            <div class="rate-popup-quality">
+                                                <div class="title-quality">Đánh giá của bạn về sản phẩm:</div>
+                                                <span class="star-quality"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                                            </div>
+                                            <div class="content-comment-popup">
+                                                <input type="text" class="comment-guest-name" placeholder="Nhập họ tên của bạn">
+                                                <input type="text" class="comment-guest-email" placeholder="Nhập email của bạn">
+                                                <textarea type="" class="content-comment" placeholder="Nhập nội dung đánh giá của bạn về sản phẩm này"></textarea>
+                                                <div class="btn send-comment">Gửi đánh giá</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rating-filter ">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active"><a href="#rate-all" aria-controls="home" role="tab" data-toggle="tab">Tất cả</a></li>
+                                            <li role="presentation"><a href="#rate-five-star" aria-controls="profile" role="tab" data-toggle="tab">5 điểm <span class="rate-count">(1)</span></a></li>
+                                            <li role="presentation"><a href="#rate-four-star" aria-controls="messages" role="tab" data-toggle="tab">5 điểm <span class="rate-count">(1)</a></li>
+                                            <li role="presentation" class="active"><a href="#three-star" aria-controls="home" role="tab" data-toggle="tab">5 điểm <span class="rate-count">(1)</span></a> </li>
+                                            <li role="presentation"><a href="#rate-two-star" aria-controls="profile" role="tab" data-toggle="tab">5 điểm <span class="rate-count">(1)</span></a></li>
+                                            <li role="presentation"><a href="#rate-one-star" aria-controls="profile" role="tab" data-toggle="tab">5 điểm <span class="rate-count">(1)</span></a></li>
+                                            <li role="presentation"><a href="#rate-got-picture" aria-controls="messages" role="tab" data-toggle="tab">5 điểm <span class="rate-count">(1)</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="rating-content clearfix">
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="rate-all">
+                                    <div class="rate-comment">
+                                        <div class="comment-head">
+                                            <div class="comment--user">Mài dà hú</div>
+                                            <div class="comment-star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+                                        </div>
+                                        <div class="comment-content">
+                                            <p class="comment-full">Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi Ối dồi ôi</p>
+                                            <div class="comment-feedback">
+                                                <a href="#" class="comment-repply">Gửi trả lời</a>
+                                                <a href="#" class="comment-like"><i class="fas fa-thumbs-up"></i> Hữu ích</a>
+                                                <a href="#" class="comment-report"><i class="fas fa-exclamation-triangle"></i> Báo cáo sai phạm</a>
+                                                <div class="comment-date">13:36 03/07/2021</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane " id="rate-five-star">rate-five</div>
+                                <div role="tabpanel" class="tab-pane " id="rate-four-star">rate-four</div>
+                                <div role="tabpanel" class="tab-pane " id="three-star-star">three-star</div>
+                                <div role="tabpanel" class="tab-pane " id="rate-two-star">rate-two</div>
+                                <div role="tabpanel" class="tab-pane " id="rate-one-star">rate-one</div>
+                                <div role="tabpanel" class="tab-pane " id="rate-got-picture">rate-got</div>
+                            </div>
+                        </div>
                     </div>
+                </div>
         </section>
         <section class="product">
             <div class="container">
