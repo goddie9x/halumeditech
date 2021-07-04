@@ -265,7 +265,81 @@ activeEvent('.add-cart', function(e) {
     let product = e.target.closest('.card.item');
     let productName = product.querySelector('.card-title h3').innerHTML;
     let imgURL = product.querySelector('img').getAttribute('src');
-    let achol = product.querySelector('a.card-title').getAttribute('href')
+    let achol = product.querySelector('a.card-title').getAttribute('href');
+    let cost = product.querySelector('.cost').innerHTML;
+    let productsPopup = $('.item-product');
+    let headerCart = $('.header-cart');
+    let topCartContent = `
+        <div class="item-product product-${currentNumberSelected} clearfix">
+            <a href="${achol}" class="item-image left">
+                <img class="" src="${imgURL}" alt="" class="card-img-top">
+            </a>
+            <div class="item-info">
+                <a href="${achol}" class="item-name left">${productName}</a>
+                <div class="item-remove left">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="price">${cost}</div>
+                     <div class="number-products">
+                        <button class="add-number">-</button>
+                        <input type="text" class="choice-number">
+                        <button class="sub-number">+</button>
+                    </div>
+                </div>
+            </div>
+    `;
+
+    currentNumberSelected++;
+    $('.header-cart-count').html(currentNumberSelected);
+    $('.modal.cart').show();
+    $('.popup-add-cart').show();
+    $('.cart-popup-quantity').html(`<i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng của bạn (${currentNumberSelected} sản phẩm) <i class="fa fa-caret-right" aria-hidden="true"></i>`);
+
+    productsPopup.find('.item-recent').remove();
+
+    sumPrice += +cost;
+    if (currentNumberSelected == 1) {
+        headerCart.html(
+            `<div class="header-cart-content">${topCartContent}</div>
+        <div class="header-cart-footer">
+            <div class="total-price">
+                <div class="left">Tổng tiền tạm tính</div>
+                <div class="right price">${sumPrice}<u>đ</u></div>
+            </div>
+            <div class="do-price btn">Tiến hành thanh toán</div>
+        </div>
+    `);
+    } else {
+        $('.header-cart-content').append(topCartContent);
+    }
+
+    $('.content-cart-body').append(`
+    <div class="item-product product-${currentNumberSelected} clearfix">
+                            <a href="${achol}" class="item-image left">
+                                <img class="" src="${imgURL}" alt="" class="card-img-top">
+                            </a>
+                            <div class="item-info left">
+                                <a href="#id1" class="item-name">${productName}</a>
+                                <div class="item-remove" >
+                                    <i class="fa fa-times" aria-hidden="true"></i>Xoá sản phẩm
+                                </div>
+                                <div class="item-recent"><i class="fa fa-check" aria-hidden="true">Sản phẩm vừa thêm</i></div>
+                            </div>
+                            <div class="price left">${cost}</div>
+                            <div class="number-products left">
+                                <button class="add-number">-</button>
+                                <input type="text" class="choice-number">
+                                <button class="sub-number">+</button>
+                            </div>
+                            <div class="price price-total left">1.250.000<u>đ</u></div>
+          </div>
+    `);
+});
+activeEvent('.detail-body .btn', function(e) {
+    let product = e.target.closest('.detail-product');
+    let productName = product.querySelector('.card-title h3').innerHTML;
+    let imgURL = product.querySelector('img').getAttribute('src');
+    let achol = product.querySelector('a.card-title').getAttribute('href');
     let cost = product.querySelector('.cost').innerHTML;
     let productsPopup = $('.item-product');
     let headerCart = $('.header-cart');
@@ -362,12 +436,19 @@ activeEvent('.modal-overlay', function() {
     $('.modal.cart').hide();
     $('.popup-add-cart').hide();
     $('.popup-quickview').hide();
+    $('.rate-creating').hide();
 });
 activeEvent('.fa-close', function() {
     $('.modal.cart').hide();
     $('.popup-add-cart').hide();
     $('.popup-quickview').hide();
 }, '.modal.cart');
+activeEvent('.fa-close', function() {
+    $('.rate-creating').hide();
+});
+activeEvent('.fa-close', function() {
+    $('.rate-creating').hide();
+});
 activeEvent('.quick-view', function(e) {
     let popupQuickView = $('.popup-quickview');
     let product = e.target.closest('.card.item');
@@ -426,6 +507,26 @@ activeEvent('.mode-view-grid', function(e) {
     replaceClass('.card.item', 'col-12', 'col-lg-3 col-md-4 col-sm-6');
     replaceClass('.card-head', 'col-4', '');
 });
+activeEvent('.rating-filter-mb', function(e) {
+    $('.rate-table-choice').toggleClass('active');
+});
+activeEvent('.create-rate', function(e) {
+    $('.rate-creating').html(
+
+    );
+    $('.rate-creating').show();
+});
+activeEvent('.fa-star', function(e) {
+    let currentStar = $(e.target);
+    let index = currentStar.index();\
+    currentStar.parent().find('.fa-star').each((i, element) => {
+        if (i <= index) {
+            $(element).css('color', '#ffff00');
+        } else {
+            $(element).css('color', 'rgba(0, 0, 0, 0.1)');
+        }
+    });
+}, '.rate-popup-quality', 'mouseover');
 //library activeEvent made by Tam
 function activeEvent(elementTriggers, Targets, elementContainer, event = 'click') {
     if (elementContainer) {
