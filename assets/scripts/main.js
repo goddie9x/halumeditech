@@ -493,7 +493,7 @@ activeEvent('.quick-view', function(e) {
 activeEvent('.footer-widget h4', function(e) {
     let footerWidget = $(e.target).parents('.footer-widget').find('.list-col');
     footerWidget.toggleClass('active');
-    $(e.target).find('.fa-plus').toggleClass('sub');
+    $(e.target).toggleClass('sub');
 });
 activeEvent('.mode-view-column', function(e) {
     $('.mode-view-column').addClass('active');
