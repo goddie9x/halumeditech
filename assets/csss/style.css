@@ -709,16 +709,17 @@ a.fixed-right--call img {
 }
 
 .header_search input {
-    padding-left: 30px;
+    padding-left: 50px;
     line-height: 40px;
     background: #f5f5f5;
     border: none;
+    outline: none;
 }
 
 .header_search .btn {
     position: absolute;
     left: 0px;
-    top: 4px;
+    top: 1px;
 }
 
 .header_search .btn i {
