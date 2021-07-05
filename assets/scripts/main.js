@@ -503,7 +503,8 @@ activeEvent('.mode-view-column', function(e) {
     replaceClass('.card-head', '', 'col-4');
 });
 activeEvent('.filter-mb', function(e) {
-    $('.filter').toggleClass('active', 'col-3');
+    $(e.target).closest('.filter-mb').toggleClass('opened');
+    $('.filter').toggleClass('active');
 });
 activeEvent('.mode-view-grid', function(e) {
     $('.mode-view-grid').addClass('active');
