@@ -518,7 +518,7 @@ activeEvent('.create-rate', function(e) {
 });
 activeEvent('.fa-star', function(e) {
     let currentStar = $(e.target);
-    let index = currentStar.index();\
+    let index = currentStar.index();
     currentStar.parent().find('.fa-star').each((i, element) => {
         if (i <= index) {
             $(element).css('color', '#ffff00');

@@ -1341,7 +1341,8 @@ ul.nav_link--slide li:hover {}
 }
 
 .detail-body input {
-    width: 50px;
+    margin: 0 -10px;
+    width: 60px;
 }
 
 .detail-body .btn {
@@ -1360,7 +1361,14 @@ ul.nav_link--slide li:hover {}
     background: #000;
 }
 
-.product-tab {}
+.nav-tabs {
+    line-height: 47px;
+    border-bottom: none;
+}
+
+.nav-tabs li {
+    margin-bottom: 0;
+}
 
 .nav-tabs li a {
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1381,6 +1389,190 @@ ul.nav_link--slide li:hover {}
 .tab-content {
     padding: 20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.rating-header {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: block;
+    position: relative;
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.rating-header .nav-tabs li a {
+    font-weight: 500;
+    text-transform: unset;
+    height: 30px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.rating-header .nav-tabs li a.active {
+    background-color: #fff;
+    color: #039a3b;
+    border: 1px solid#039a3b;
+}
+
+.star-by-number {
+    font-size: 30px;
+    color: #039a3b;
+}
+
+.star-rate {
+    font-size: 20px;
+    align-self: center;
+}
+
+.rating-filter .nav-tabs {
+    line-height: 40px;
+    position: absolute;
+    top: 30px;
+}
+
+.rate-info,
+.comment-head,
+.comment-feedback,
+.rate-btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.rating-averaged .btn {
+    min-width: 200px;
+    text-align: center;
+}
+
+.rating-averaged .btn:hover {
+    color: #fff;
+}
+
+.rating-averaged .btn i {
+    color: #fff;
+}
+
+.rate-btn {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.rate-btn .btn {
+    margin: 5px;
+}
+
+.rating-filter-mb {
+    display: none;
+}
+
+.popup-rate-creating {
+    border-radius: 5px;
+    z-index: 2;
+    background-color: #fff;
+    position: absolute;
+    max-width: 700px;
+    width: 80%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    padding: 25px;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.7);
+}
+
+.tab-content .fa-star {
+    --fa-border-width: 20px;
+    --fa-border-style: solid;
+    --fa-border-color: yellow;
+    color: yellow;
+}
+
+.tab-content .fa-star:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+.comment-feedback a {
+    margin: auto 10px;
+    position: relative;
+    color: #039a3b;
+}
+
+.comment-date {
+    margin-left: 8px;
+}
+
+.comment-feedback .comment-like:hover {
+    color: rgba(0, 17, 255, 0.692);
+}
+
+.comment-feedback .comment-report:hover {
+    color: red;
+}
+
+.comment-feedback a::after {
+    content: "";
+    position: absolute;
+    right: -13px;
+    top: 10px;
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;
+    background: #969696;
+}
+
+.rate-popup-head {
+    text-align: center;
+    font-size: 18px;
+}
+
+.name-product {
+    font-weight: 700;
+}
+
+.rate-popup-quality {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 30px 0;
+}
+
+.title-quality {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.star-quality {
+    font-size: 22px;
+}
+
+.content-comment-popup input {
+    display: block;
+    margin-bottom: 20px;
+    border-color: rgba(0, 0, 0, 0.1);
+    line-height: 20px;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.content-comment-popup textarea {
+    height: 200px;
+    line-height: 25px;
+    border-color: rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    resize: none;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.content-comment-popup input:focus {
+    outline: rgba(0, 0, 0, 0.1);
+}
+
+.content-comment-popup .send-comment {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
 }
 
 
@@ -2322,6 +2514,13 @@ ul.nav_link--slide li:hover {}
     .container {
         max-width: 100%;
     }
+    .nav-tabs {
+        flex-direction: column;
+    }
+    .nav-tabs li a {
+        display: block;
+        padding: 0 15px;
+    }
     .header_topbar .left {
         display: none;
     }
@@ -2359,6 +2558,37 @@ ul.nav_link--slide li:hover {}
     }
     .list-col.active {
         display: block;
+    }
+    .rating-filter-mb {
+        display: block;
+        position: relative;
+    }
+    .rate-table-choice {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        text-align: left;
+        padding: 10px;
+        width: 200px;
+        top: 40px;
+        line-height: 20px;
+        left: 0;
+        cursor: pointer;
+        color: #000;
+        z-index: 1;
+        border: 1px solid rgba(2, 123, 47, .5);
+    }
+    .rate-table-choice input {
+        margin-right: 10px;
+    }
+    .rate-table-choice.active {
+        display: block;
+    }
+    .rating-filter {
+        display: none;
+    }
+    .rating-filter.active {
+        display: flex;
     }
 }
 
