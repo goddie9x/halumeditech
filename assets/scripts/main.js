@@ -239,7 +239,7 @@ $(document).ready(function() {
         center: false,
     });
     let zoomImage = $('.zoom-img');
-    if (zoomImage) {
+    if (zoomImage[0]) {
 
         zoomImage.ezPlus({
             scrollZoom: true,
